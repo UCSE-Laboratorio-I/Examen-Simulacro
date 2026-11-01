@@ -5,7 +5,7 @@
     "catedra": "Laboratorio I - Tecnicatura Universitaria en Automatización y Robótica / Informática - UCSE DASS",
     "ciclo": 2026,
     "docente": "Ing. Fabio D. Argañaraz",
-    "version": "2.0.0"
+    "version": "2.1.0"
   },
   "security": {
     "algorithm": "SHA-256 + Salted HMAC + Canonical Prolog AST Alpha-Hash",
@@ -17,7 +17,7 @@
       "part": "teoria",
       "weight": 10,
       "biblio": "Russell & Norvig Cap. 1.1 (pp. 1–5) y Cap. 2.1–2.3 (pp. 34–46) • Diapositivas Clase 1 (Slides 15–18) y Clase 3.1 (Slides 5–14).",
-      "feedback": "El paradigma central de Russell & Norvig es Actuar Racionalmente (Agentes Racionales). La Función de Agente es el mapeo matemático abstracto f: P* -> A y el Programa es su implementación concreta. En un vehículo autónomo, cámaras/LiDAR/GPS son Sensores, y el Test de Turing Total exige Visión Computacional y Robótica.",
+      "feedback": "El enfoque rector de Russell & Norvig es Actuar Racionalmente (Agente Racional). La Función de Agente f: P* -> A es el mapeo matemático abstracto, mientras que el Programa de Agente es la implementación en código que corre sobre la arquitectura. En un taxi autónomo, cámaras/LiDAR son Sensores. El Test de Turing Total añade Visión Computacional y Robótica al test estándar.",
       "hashes": {
         "item_paradigma_russell_norvig": "63a2f61745162581bbcb5528e5458ae8ace44b97c3f4bab44882b16336d81103",
         "item_funcion_vs_programa": "105155dee69e4afddbefda551ac2dff228ade78eae63237ab2aba4eaf954bd7e",
@@ -104,6 +104,7 @@
           "c3f2d328ae144419dab3c73fca2d0277352b9c5d01091f2295d6e6e5368381fc"
         ],
         "especialista_manana/2": [
+          "76b4bb45fc81d841393feef91eb31f1b4e0360fc8e663b1a7ea3d531bdd620d6",
           "76b4bb45fc81d841393feef91eb31f1b4e0360fc8e663b1a7ea3d531bdd620d6"
         ]
       },
@@ -148,7 +149,7 @@
         ],
         "lote_goteo_seco/2": [
           "81a49d309567f0a07cbac68b2680230ca50439dedbb9c061bed239bbdfe7113f",
-          "097c9ab1e34055ba6a7b996585ef402eca8fc3ee0e46ec180efb3da41559ce03"
+          "81a49d309567f0a07cbac68b2680230ca50439dedbb9c061bed239bbdfe7113f"
         ]
       },
       "hashes": {

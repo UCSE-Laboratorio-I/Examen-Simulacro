@@ -51,7 +51,7 @@
 <body class="bg-[#F4F6F9] dark:bg-[#01182E] text-[#212529] dark:text-slate-100 min-h-screen antialiased selection:bg-[#01305B] selection:text-[#FFED00]">
 
   <!-- =========================================================================
-       TOPBAR INSTITUCIONAL UCSE (Estilo https://www.ucse.edu.ar/ - #01305B)
+       TOPBAR INSTITUCIONAL UCSE (#01305B) - EXAMEN CONTROLADO: TEMPORIZADOR AUTOMÁTICO
   ========================================================================== -->
   <div class="ucse-topbar bg-[#01305B] text-white border-b border-[#1569AE]/40 text-xs">
     <div class="max-w-6xl mx-auto px-4 py-2 flex flex-wrap items-center justify-between gap-2">
@@ -59,17 +59,9 @@
         <span class="px-2 py-0.5 rounded bg-[#FFED00] text-[#01305B] font-extrabold text-[11px]">UCSE • DASS</span>
         <span class="hidden sm:inline text-slate-200">Universidad Católica de Santiago del Estero &bull; Departamento Académico San Salvador</span>
       </div>
-      <div class="flex items-center gap-3" id="exam-timer-controls">
-        <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#023967] border border-[#6EC1E4]/30">
-          <span>⏱️</span>
-          <span id="timer-display" class="prolog-code font-bold text-[#FFED00] text-xs">90:00</span>
-        </div>
-        <button type="button" id="btn-timer-toggle" class="px-2.5 py-1 rounded bg-[#FFED00] hover:bg-[#FDD247] text-[#01305B] font-bold transition text-[11px]">
-          ▶ Iniciar
-        </button>
-        <button type="button" id="btn-timer-reset" class="px-2 py-1 rounded bg-[#023967] hover:bg-[#1569AE] text-white border border-white/20 transition text-[11px]" title="Reiniciar cronómetro a 90 minutos">
-          ↺
-        </button>
+      <div class="flex items-center gap-2" id="exam-timer-controls">
+        <span class="text-xs text-slate-200">⏱️ Tiempo restante:</span>
+        <span id="timer-display" class="prolog-code font-bold text-[#FFED00] text-xs px-2.5 py-1 rounded-lg bg-[#023967] border border-[#6EC1E4]/30">90:00</span>
       </div>
     </div>
   </div>
@@ -106,11 +98,8 @@
         </div>
       </div>
 
-      <!-- Botones Globales Obligatorios -->
+      <!-- Botones Globales (Examen Controlado: Sin botón de bibliografía externa durante la prueba) -->
       <div class="flex items-center gap-2">
-        <button type="button" id="btn-open-biblio-all" class="px-2.5 py-1.5 text-xs font-bold rounded-lg bg-[#F4F6F9] dark:bg-[#01182E] hover:bg-slate-200 text-[#01305B] dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] transition flex items-center gap-1.5">
-          <span>📖</span> <span class="hidden md:inline">Bibliografía</span>
-        </button>
         <button type="button" id="btn-git-guide" class="px-2.5 py-1.5 text-xs font-bold rounded-lg bg-[#F4F6F9] dark:bg-[#01182E] hover:bg-slate-200 text-[#01305B] dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] transition flex items-center gap-1.5">
           <span>🐙</span> <span class="hidden md:inline">Guía Entrega</span>
         </button>
@@ -141,7 +130,7 @@
             Simulacro de Examen Integrador: Teoría (TP1–TP5) y Práctica en Prolog (TP7)
           </h2>
           <p class="text-slate-600 dark:text-slate-200 text-sm leading-relaxed max-w-4xl">
-            Evaluación formativa integral sobre Fundamentos de IA, Agentes Racionales, Búsqueda No Informada e Informada, Representación del Conocimiento, Lógica de Primer Orden y Modelado Práctico en SWI-Prolog.
+            Evaluación oficial integradora sobre Fundamentos de IA, Búsqueda No Informada, Búsqueda Heurística, Lógica Proposicional, Lógica de Primer Orden y Programación Declarativa en SWI-Prolog.
           </p>
         </div>
         <div class="grid grid-cols-2 gap-2.5 shrink-0 text-center">
@@ -210,7 +199,7 @@
       </div>
 
       <!-- =====================================================================
-           EJERCICIO T1: INTRODUCCIÓN A LA IA, CICLO DE AGENTE Y MARCO PEAS
+           EJERCICIO T1: DEFINICIONES DE IA, PEAS DE TAXI AUTÓNOMO Y TEST DE TURING TOTAL
       ====================================================================== -->
       <article class="ucse-card p-6 md:p-8 bg-white dark:bg-[#023967]/90 border border-slate-200 dark:border-[#154D80] space-y-6">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200 dark:border-[#154D80] pb-4">
@@ -218,7 +207,7 @@
             <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-xs font-bold bg-[#01305B] text-[#FFED00] mb-1.5">
               <span>📘 Unidad 1 • TP N° 1</span>
             </div>
-            <h3 class="text-lg md:text-xl font-extrabold text-[#01305B] dark:text-white ucse-heading">Ejercicio T1: Introducción a la IA, Ciclo de Agente y Marco PEAS</h3>
+            <h3 class="text-lg md:text-xl font-extrabold text-[#01305B] dark:text-white ucse-heading">Ejercicio T1: Definiciones de IA, PEAS de Taxi Autónomo y Test de Turing Total</h3>
           </div>
           <span class="px-3.5 py-1 rounded-full bg-[#1569AE]/10 dark:bg-[#6EC1E4]/15 text-[#01305B] dark:text-[#6EC1E4] border border-[#1569AE]/30 text-xs font-extrabold self-start sm:self-auto shrink-0">
             10 Puntos (4 &times; 2,5 pts)
@@ -226,23 +215,23 @@
         </div>
 
         <p class="text-sm text-slate-600 dark:text-slate-200 leading-relaxed">
-          Analiza los fundamentos epistemológicos de la Inteligencia Artificial según Russell & Norvig, la arquitectura del ciclo sensorial-motor y la especificación formal del entorno de trabajo (PEAS).
+          Evalúa el cuadrante de 4 definiciones de IA de Russell & Norvig, la distinción entre Función y Programa de Agente, la especificación formal PEAS de un vehículo autónomo y los requisitos del Test de Turing Total.
         </p>
 
         <div class="space-y-3.5">
           <!-- Ítem 1: item_paradigma_russell_norvig -->
           <div class="flex flex-col lg:flex-row lg:items-center justify-between p-4 bg-slate-50 dark:bg-[#012243] rounded-xl border border-slate-200 dark:border-[#154D80] hover:border-[#1569AE] transition-all gap-4">
             <div class="lg:max-w-xl space-y-1">
-              <span class="font-bold text-[#01305B] dark:text-[#6EC1E4] text-sm block">1. Cuadrante de las 4 Dimensiones de Russell & Norvig:</span>
-              <span class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed block">¿Cuál es el enfoque adoptado como paradigma central moderno por estudiar agentes que maximizan el logro de objetivos?</span>
+              <span class="font-bold text-[#01305B] dark:text-[#6EC1E4] text-sm block">1. Cuadrante de Definiciones de Inteligencia Artificial (Russell & Norvig):</span>
+              <span class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed block">¿Cuál de los cuatro enfoques define formalmente la IA como el estudio y diseño de "Agentes Computacionales que maximizan el logro de sus objetivos según sus percepciones y conocimiento"?</span>
             </div>
             <div class="lg:w-96 shrink-0">
-              <select data-ex="ej1_teoria_tp1" data-key="item_paradigma_russell_norvig" aria-label="1. Cuadrante de las 4 Dimensiones de Russell &amp; Norvig:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
+              <select data-ex="ej1_teoria_tp1" data-key="item_paradigma_russell_norvig" aria-label="1. Cuadrante de Definiciones de Inteligencia Artificial (Russell &amp; Norvig):" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="pensar_como_humano_cognitivo">Pensar como un humano (Modelado Cognitivo e introspección psicológica)</option>
-                <option value="actuar_racionalmente_agentes">Actuar racionalmente (Enfoque de Agentes Racionales que maximizan el desempeño esperado)</option>
-                <option value="actuar_como_humano_turing">Actuar como un humano (Imitación conductual indistinguible mediante teleimpresora)</option>
-                <option value="pensar_racionalmente_silogismos">Pensar racionalmente (Leyes del pensamiento y silogismos aristotélicos puros)</option>
+                <option value="actuar_racionalmente_agentes">Actuar racionalmente: diseñar agentes que maximizan el logro esperado de sus metas.</option>
+                <option value="pensar_como_humano_cognitivo">Pensar como humano: emular los procesos cognitivos y neurobiológicos de la mente humana.</option>
+                <option value="actuar_como_humano_turing">Actuar como un humano: imitar el comportamiento humano de forma indistinguible por texto.</option>
+                <option value="pensar_racionalmente_silogismos">Pensar racionalmente: derivar conclusiones correctas mediante silogismos y leyes de la lógica.</option>
               </select>
             </div>
           </div>
@@ -255,10 +244,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej1_teoria_tp1" data-key="item_funcion_vs_programa" aria-label="2. Ciclo Sensorial-Motor y Arquitectura de Agentes:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="ambos_son_hardware_fisico">Ambos representan los actuadores electromecánicos que modifican el entorno</option>
-                <option value="funcion_codigo_programa_tabla">La Función es el código fuente en Python/Prolog y el Programa es la tabla matemática infinita</option>
-                <option value="funcion_mapeo_abstracto_programa_implementacion">La Función es la correspondencia matemática abstracta (f: P* → A) y el Programa es su implementación concreta ejecutada en una arquitectura</option>
-                <option value="funcion_solo_reactiva_programa_humano">La Función solo aplica a agentes sin sensores y el Programa únicamente a sistemas biológicos</option>
+                <option value="ambos_son_hardware_fisico">La Función define los actuadores físicos y el Programa define la interfaz sensorial.</option>
+                <option value="funcion_mapeo_abstracto_programa_implementacion">La Función es el mapeo matemático abstracto (f: P* → A) y el Programa es su implementación concreta.</option>
+                <option value="funcion_codigo_programa_tabla">La Función es el código fuente del agente y el Programa es la tabla de datos sensoriales.</option>
+                <option value="funcion_solo_reactiva_programa_humano">La Función describe agentes biológicos y el Programa describe únicamente agentes artificiales.</option>
               </select>
             </div>
           </div>
@@ -271,10 +260,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej1_teoria_tp1" data-key="item_peas_vehiculo_autonomo" aria-label="3. Especificación PEAS (PAGE) de un Taxi Autónomo:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="medida_rendimiento_performance">Medida de Rendimiento (Performance): criterios de seguridad y confort del pasajero</option>
-                <option value="actuadores_ejecucion">Actuadores (Actuators): mecanismos de dirección, frenado y aceleración</option>
-                <option value="sensores_percepcion">Sensores (Sensors): dispositivos de captura de percepciones del entorno vial</option>
-                <option value="entorno_environment">Entorno (Environment): autopistas, peatones, clima y normas de tránsito</option>
+                <option value="medida_rendimiento_performance">Medida de Rendimiento: criterios cuantitativos de seguridad, rapidez y confort del viaje.</option>
+                <option value="actuadores_ejecucion">Actuadores: dispositivos electromecánicos de dirección, aceleración y frenado del vehículo.</option>
+                <option value="sensores_percepcion">Sensores: dispositivos electrónicos para capturar percepciones del entorno vial.</option>
+                <option value="entorno_environment">Entorno: autopistas, señalizaciones viales, peatones y condiciones meteorológicas.</option>
               </select>
             </div>
           </div>
@@ -287,25 +276,14 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej1_teoria_tp1" data-key="item_test_turing_total" aria-label="4. Evaluación Empírica de la Inteligencia (Test de Turing vs. Test Total):" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="pln_y_aprendizaje_automatico">Procesamiento del Lenguaje Natural (PLN) y Aprendizaje Automático (Machine Learning)</option>
-                <option value="vision_computacional_y_robotica">Visión Computacional (percibir objetos físicos) y Robótica (manipular objetos y desplazarse)</option>
-                <option value="representacion_conocimiento_y_razonamiento">Representación del Conocimiento y Razonamiento Automatizado</option>
-                <option value="compiladores_y_bases_relacionales">Diseño de Compiladores y Bases de Datos Relacionales SQL</option>
+                <option value="pln_y_aprendizaje_automatico">Procesamiento del Lenguaje Natural y Aprendizaje Automático supervisado.</option>
+                <option value="representacion_conocimiento_y_razonamiento">Representación del Conocimiento estructurado y Razonamiento Lógico formal.</option>
+                <option value="redes_neuronales_y_algoritmos_geneticos">Redes Neuronales Convolucionales y Algoritmos Genéticos de optimización.</option>
+                <option value="vision_computacional_y_robotica">Visión Computacional (percibir objetos) y Robótica (manipular y desplazarse).</option>
               </select>
             </div>
           </div>
         </div>
-
-        <!-- Orientación Bibliográfica Oficial -->
-        <details class="group mt-4 rounded-xl border border-[#1569AE]/30 bg-[#F4F6F9] dark:bg-[#01182E]/80 p-3.5 text-xs text-slate-700 dark:text-slate-200 transition-all">
-          <summary class="flex cursor-pointer items-center justify-between font-bold text-[#01305B] dark:text-[#FFED00] select-none">
-            <span>📖 Dónde estudiar y repasar este tema en la bibliografía oficial de cátedra</span>
-            <span class="transition group-open:rotate-180">▾</span>
-          </summary>
-          <div class="mt-2.5 pt-2.5 border-t border-slate-300 dark:border-[#154D80] space-y-1">
-            <p><strong>Referencia Bibliográfica:</strong> <a href="http://jdelagarza.fime.uanl.mx/IA/Libros/inteligencia-artificial-un-enfoque-moderno-stuart-j-russell.pdf" target="_blank" rel="noopener noreferrer" class="underline text-[#1569AE] dark:text-[#6EC1E4] hover:text-[#01305B] font-semibold">Russell &amp; Norvig — Inteligencia Artificial: Un Enfoque Moderno</a> &bull; Russell & Norvig Cap. 1.1 (pp. 1–5) y Cap. 2.1–2.3 (pp. 34–46) • Diapositivas Clase 1 (Slides 15–18) y Clase 3.1 (Slides 5–14).</p>
-          </div>
-        </details>
       </article>
       <!-- =====================================================================
            EJERCICIO T2: FORMULACIÓN DE PROBLEMAS Y BÚSQUEDA NO INFORMADA (BFS VS. DFS)
@@ -337,10 +315,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej2_teoria_tp2" data-key="item_formulacion_costo_camino" aria-label="1. Componentes Formales de un Problema de Búsqueda:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="estimar_distancia_recta_meta">Estimar heurísticamente la distancia en línea recta restante hasta Bucarest</option>
-                <option value="asignar_costo_acumulado_trayectoria">Asignar un valor numérico al camino sumando los costos de las acciones ejecutadas desde el estado inicial hasta n</option>
-                <option value="contar_cantidad_estados_totales">Calcular la cardinalidad total del espacio de estados alcanzables del problema</option>
-                <option value="verificar_si_es_estado_meta">Determinar booleanamente si el nodo actual satisface la condición de parada</option>
+                <option value="asignar_costo_acumulado_trayectoria">Asignar un valor numérico al camino sumando los costos de las acciones ejecutadas.</option>
+                <option value="estimar_distancia_recta_meta">Estimar la distancia en línea recta que resta recorrer hasta la meta.</option>
+                <option value="contar_cantidad_estados_totales">Calcular la cantidad total de estados alcanzables en el grafo del problema.</option>
+                <option value="verificar_si_es_estado_meta">Verificar si el nodo actual satisface las condiciones del estado objetivo.</option>
               </select>
             </div>
           </div>
@@ -353,10 +331,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej2_teoria_tp2" data-key="item_diferencia_nodo_estado" aria-label="2. Distinción Ontológica entre Estado del Mundo y Nodo de Búsqueda:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="ubicacion_actual_agente">La configuración física o ciudad actual donde se encuentra el agente</option>
-                <option value="puntero_padre_accion_costo_profundidad">El puntero al nodo padre, la acción aplicada, el costo acumulado g(n) y la profundidad d en el árbol</option>
-                <option value="conjunto_ciudades_mapa">La topología completa de carreteras del mapa de Rumania</option>
-                <option value="heuristica_exacta_entorno">Las leyes físicas dinámicas del entorno de operación</option>
+                <option value="ubicacion_actual_agente">La configuración física del entorno o ciudad en la que se ubica el agente.</option>
+                <option value="puntero_padre_accion_costo_profundidad">El puntero al nodo padre, la acción aplicada, el costo acumulado g(n) y la profundidad d.</option>
+                <option value="conjunto_ciudades_mapa">La descripción de las carreteras y conexiones geográficas del mapa del dominio.</option>
+                <option value="heuristica_exacta_entorno">La función matemática de transición de estados que rige las leyes del medio.</option>
               </select>
             </div>
           </div>
@@ -369,10 +347,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej2_teoria_tp2" data-key="item_bfs_cola_memoria" aria-label="3. Búsqueda Primero en Anchura (BFS — Breadth-First Search):" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="pila_lifo_memoria_lineal">Pila LIFO (Last-In, First-Out) con complejidad espacial lineal O(b · m)</option>
-                <option value="cola_fifo_memoria_exponencial">Cola FIFO (First-In, First-Out) con complejidad espacial exponencial O(bᵈ) al retener todo el nivel en memoria</option>
-                <option value="cola_prioridad_heuristica">Cola de prioridad ordenada por h(n) con memoria constante O(1)</option>
-                <option value="arbol_binario_sin_memoria">Lista aleatoria sin almacenamiento de frontera en memoria RAM</option>
+                <option value="pila_lifo_memoria_lineal">Pila LIFO con complejidad espacial lineal O(b · m) al explorar una rama a la vez.</option>
+                <option value="cola_prioridad_heuristica">Cola de prioridad ordenada por g(n) con memoria lineal O(b · d) acotada.</option>
+                <option value="cola_fifo_memoria_exponencial">Cola FIFO con complejidad espacial exponencial O(b^d) al retener todo el nivel en memoria.</option>
+                <option value="arbol_binario_sin_memoria">Cola de prioridad ordenada por h(n) con memoria sublineal O(d) constante.</option>
               </select>
             </div>
           </div>
@@ -385,25 +363,14 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej2_teoria_tp2" data-key="item_dfs_ventaja_desventaja" aria-label="4. Búsqueda Primero en Profundidad (DFS — Depth-First Search):" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="garantiza_optimalidad_pero_lenta">Garantiza siempre hallar el camino más corto pero requiere memoria exponencial O(bᵈ)</option>
-                <option value="memoria_lineal_pero_incompleta_ciclos">Consume memoria lineal O(b · m), pero es no óptima e incompleta en árboles si existen bucles o ramas infinitas</option>
-                <option value="expande_por_niveles_uniformes">Expande estrictamente nivel por nivel garantizando optimalidad con costos variables</option>
-                <option value="usa_dos_fronteras_simultaneas">Ejecuta dos búsquedas simultáneas desde el inicio y la meta con costo O(b^(d/2))</option>
+                <option value="garantiza_optimalidad_pero_lenta">Garantiza siempre la solución óptima pero requiere memoria exponencial O(b^d).</option>
+                <option value="expande_por_niveles_uniformes">Expande sistemáticamente por niveles garantizando optimalidad con costos variables.</option>
+                <option value="usa_dos_fronteras_simultaneas">Ejecuta dos búsquedas simultáneas desde origen y destino con memoria O(b^(d/2)).</option>
+                <option value="memoria_lineal_pero_incompleta_ciclos">Consume memoria lineal O(b · m), pero es incompleta en árboles ante lazos o ramas infinitas.</option>
               </select>
             </div>
           </div>
         </div>
-
-        <!-- Orientación Bibliográfica Oficial -->
-        <details class="group mt-4 rounded-xl border border-[#1569AE]/30 bg-[#F4F6F9] dark:bg-[#01182E]/80 p-3.5 text-xs text-slate-700 dark:text-slate-200 transition-all">
-          <summary class="flex cursor-pointer items-center justify-between font-bold text-[#01305B] dark:text-[#FFED00] select-none">
-            <span>📖 Dónde estudiar y repasar este tema en la bibliografía oficial de cátedra</span>
-            <span class="transition group-open:rotate-180">▾</span>
-          </summary>
-          <div class="mt-2.5 pt-2.5 border-t border-slate-300 dark:border-[#154D80] space-y-1">
-            <p><strong>Referencia Bibliográfica:</strong> <a href="http://jdelagarza.fime.uanl.mx/IA/Libros/inteligencia-artificial-un-enfoque-moderno-stuart-j-russell.pdf" target="_blank" rel="noopener noreferrer" class="underline text-[#1569AE] dark:text-[#6EC1E4] hover:text-[#01305B] font-semibold">Russell &amp; Norvig — Inteligencia Artificial: Un Enfoque Moderno</a> &bull; Russell & Norvig Cap. 3.1–3.4 (pp. 64–87, Tabla 3.17) • Diapositivas Clase 3.2 (Slides 4–15, 37–58).</p>
-          </div>
-        </details>
       </article>
       <!-- =====================================================================
            EJERCICIO T3: BÚSQUEDA INFORMADA, TRAMPAS DE VORAZ Y ALGORITMO A*
@@ -435,10 +402,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej3_teoria_tp3" data-key="item_voraz_funcion_trampa" aria-label="1. Búsqueda Voraz Primero el Mejor (Greedy Best-First Search):" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="usa_g_mas_h_optima">Usa f(n) = g(n) + h(n), garantizando el camino óptimo sin expandir nodos innecesarios</option>
-                <option value="usa_solo_h_callejon_neamt">Usa f(n) = h(n); su miopía local elige Neamt por menor distancia en línea recta, metiéndose en un callejón sin salida</option>
-                <option value="usa_solo_g_dijkstra">Usa f(n) = g(n), ignorando la heurística y comportándose como Búsqueda de Costo Uniforme</option>
-                <option value="usa_corte_iterativo_lineal">Usa f_limit recursivo evitando cualquier ciclo incluso sin lista de explorados</option>
+                <option value="usa_solo_h_callejon_neamt">Usa f(n) = h(n); su miopía local elige Neamt por menor h(n), entrando en un callejón sin salida.</option>
+                <option value="usa_g_mas_h_optima">Usa f(n) = g(n) + h(n), garantizando optimalidad sin desviarse del objetivo.</option>
+                <option value="usa_solo_g_dijkstra">Usa f(n) = g(n), ignorando la heurística y comportándose como Costo Uniforme.</option>
+                <option value="usa_corte_iterativo_lineal">Usa un límite de corte recursivo evitando ciclos incluso sin lista cerrada.</option>
               </select>
             </div>
           </div>
@@ -451,10 +418,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej3_teoria_tp3" data-key="item_a_star_significado_f" aria-label="2. Función de Evaluación Canónica del Algoritmo A*:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="f_igual_g_menos_h">f(n) = g(n) − h(n): diferencia neta entre el costo pasado y el futuro</option>
-                <option value="f_igual_g_mas_h_costo_estimado_total">f(n) = g(n) + h(n): costo total estimado de la solución más barata que pasa a través del nodo n</option>
-                <option value="f_igual_h_al_cuadrado">f(n) = [h(n)]²: penalización cuadrática de la distancia heurística hacia el objetivo</option>
-                <option value="f_igual_profundidad_por_ramificacion">f(n) = b · d: producto del factor de ramificación por la profundidad actual</option>
+                <option value="f_igual_g_menos_h">f(n) = g(n) − h(n): balance diferencial entre el costo recorrido y el restante.</option>
+                <option value="f_igual_g_mas_h_costo_estimado_total">f(n) = g(n) + h(n): costo total estimado de la solución más barata que pasa por n.</option>
+                <option value="f_igual_h_al_cuadrado">f(n) = h(n) / g(n): cociente heurístico para priorizar nodos de bajo costo relativo.</option>
+                <option value="f_igual_profundidad_por_ramificacion">f(n) = b · d: ponderación entre el factor de ramificación y la profundidad actual.</option>
               </select>
             </div>
           </div>
@@ -467,10 +434,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej3_teoria_tp3" data-key="item_a_star_momento_test_meta" aria-label="3. Condición Operativa de Parada en A* y UCS:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="al_generar_sucesor_inmediatamente">En el instante mismo en que un nodo meta es generado como hijo de cualquier nodo</option>
-                <option value="al_extraer_nodo_de_frontera_para_expansion">Únicamente cuando el nodo es extraído de la cola de prioridad para ser expandido (teniendo el menor valor f de toda la frontera)</option>
-                <option value="antes_de_calcular_heuristica">Antes de calcular g(n) y h(n), al inicializar el estado raíz</option>
-                <option value="al_vaciar_completamente_frontera">Solo después de que la cola de prioridad quede completamente vacía</option>
+                <option value="al_generar_sucesor_inmediatamente">En el instante en que el nodo meta es generado como sucesor de cualquier nodo.</option>
+                <option value="antes_de_calcular_heuristica">Antes de calcular la función heurística, al inicializar el nodo en la frontera.</option>
+                <option value="al_extraer_nodo_de_frontera_para_expansion">Únicamente cuando el nodo es extraído de la cola de prioridad para su expansión.</option>
+                <option value="al_vaciar_completamente_frontera">Solo después de que la cola de prioridad quede completamente vacía sin sucesores.</option>
               </select>
             </div>
           </div>
@@ -483,25 +450,14 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej3_teoria_tp3" data-key="item_definicion_heuristica_admisible" aria-label="4. Condición de Optimalidad de A* en Búsqueda en Árboles:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="sobrestimar_costo_real">Sobrestimar siempre el costo real h*(n) para podar ramas rápidamente (h(n) &gt; h*(n))</option>
-                <option value="nunca_sobrestimar_costo_real_optimo">Nunca sobrestimar el costo real para alcanzar el objetivo: 0 ≤ h(n) ≤ h*(n) para todo nodo n, y h(meta) = 0</option>
-                <option value="ser_constante_infinita">Tomar un valor constante igual a infinito en todos los nodos intermedios</option>
-                <option value="depender_solo_del_nodo_padre">Ser estrictamente igual al costo acumulado g(n) del nodo padre</option>
+                <option value="sobrestimar_costo_real">Sobrestimar el costo real de paso: h(n) &gt; h*(n) para podar nodos rápidamente.</option>
+                <option value="ser_constante_infinita">Cumplir la desigualdad triangular: h(n) ≤ c(n, a, n') + h(n') en cada transición.</option>
+                <option value="depender_solo_del_nodo_padre">Ser estrictamente decreciente: h(n') &lt; h(n) para todo sucesor n' del nodo padre.</option>
+                <option value="nunca_sobrestimar_costo_real_optimo">No sobrestimar jamás el costo real: 0 ≤ h(n) ≤ h*(n) para todo n, con h(meta) = 0.</option>
               </select>
             </div>
           </div>
         </div>
-
-        <!-- Orientación Bibliográfica Oficial -->
-        <details class="group mt-4 rounded-xl border border-[#1569AE]/30 bg-[#F4F6F9] dark:bg-[#01182E]/80 p-3.5 text-xs text-slate-700 dark:text-slate-200 transition-all">
-          <summary class="flex cursor-pointer items-center justify-between font-bold text-[#01305B] dark:text-[#FFED00] select-none">
-            <span>📖 Dónde estudiar y repasar este tema en la bibliografía oficial de cátedra</span>
-            <span class="transition group-open:rotate-180">▾</span>
-          </summary>
-          <div class="mt-2.5 pt-2.5 border-t border-slate-300 dark:border-[#154D80] space-y-1">
-            <p><strong>Referencia Bibliográfica:</strong> <a href="http://jdelagarza.fime.uanl.mx/IA/Libros/inteligencia-artificial-un-enfoque-moderno-stuart-j-russell.pdf" target="_blank" rel="noopener noreferrer" class="underline text-[#1569AE] dark:text-[#6EC1E4] hover:text-[#01305B] font-semibold">Russell &amp; Norvig — Inteligencia Artificial: Un Enfoque Moderno</a> &bull; Russell & Norvig Cap. 4.1.1–4.1.3 (pp. 98–110) • Diapositivas Clase 4 (Slides 1–23).</p>
-          </div>
-        </details>
       </article>
       <!-- =====================================================================
            EJERCICIO T4: AGENTES BASADOS EN CONOCIMIENTO Y LÓGICA PROPOSICIONAL
@@ -533,10 +489,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej4_teoria_tp4" data-key="item_arquitectura_agente_kb" aria-label="1. Arquitectura de un Agente Basado en Conocimiento:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="tabla_hash_y_generador_aleatorio">Una tabla hash estática de reflejos y un generador de acciones pseudoaleatorias</option>
-                <option value="base_conocimiento_y_motor_inferencia">Una Base de Conocimiento (KB) con sentencias sobre el mundo y un Motor de Inferencia que deriva nuevas conclusiones mediante TELL y ASK</option>
-                <option value="red_sensores_sin_representacion">Un conjunto de actuadores directos sin representación interna ni memoria</option>
-                <option value="heuristica_manhattan_y_pila_lifo">Una función heurística euclidiana acoplada a una pila LIFO sin reglas lógicas</option>
+                <option value="base_conocimiento_y_motor_inferencia">Una Base de Conocimiento con sentencias y un Motor de Inferencia deductivo.</option>
+                <option value="tabla_hash_y_generador_aleatorio">Una tabla estática de reglas reflejas y un generador estocástico de acciones.</option>
+                <option value="red_sensores_sin_representacion">Un conjunto de actuadores directos sin memoria ni representación simbólica.</option>
+                <option value="heuristica_manhattan_y_pila_lifo">Una función heurística de distancia acoplada a una pila de búsqueda ciega.</option>
               </select>
             </div>
           </div>
@@ -549,10 +505,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej4_teoria_tp4" data-key="item_sintaxis_vs_semantica" aria-label="2. Lenguajes de Representación del Conocimiento:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="sintaxis_verdad_semantica_caligrafia">La sintaxis determina el valor de verdad en el mundo real y la semántica el tamaño de las fuentes</option>
-                <option value="sintaxis_forma_simbolos_semantica_verdad_modelos">La sintaxis especifica qué configuraciones de símbolos son sentencias bien formadas, y la semántica determina el significado y verdad de cada sentencia respecto a cada modelo posible</option>
-                <option value="ambas_son_sinonimos_exactos">Ambas son sinónimos que refieren exclusivamente a la velocidad de ejecución del compilador</option>
-                <option value="semantica_solo_aplica_a_numeros">La sintaxis aplica a la lógica proposicional y la semántica únicamente a ecuaciones diferenciales</option>
+                <option value="sintaxis_verdad_semantica_caligrafia">La sintaxis define el valor de verdad real y la semántica las reglas de formación.</option>
+                <option value="sintaxis_forma_simbolos_semantica_verdad_modelos">La sintaxis define las secuencias bien formadas y la semántica su verdad en modelos.</option>
+                <option value="ambas_son_sinonimos_exactos">La sintaxis evalúa la complejidad algorítmica y la semántica el uso de memoria RAM.</option>
+                <option value="semantica_solo_aplica_a_numeros">La sintaxis opera sobre variables proposicionales y la semántica sobre cuantificadores.</option>
               </select>
             </div>
           </div>
@@ -565,10 +521,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej4_teoria_tp4" data-key="item_propiedad_robustez_soundness" aria-label="3. Propiedades de los Algoritmos de Inferencia (Robustez / Corrección):" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="deriva_cualquier_sentencia_falsa_rapido">Que puede derivar cualquier sentencia arbitraria en tiempo constante O(1) aunque sea falsa</option>
-                <option value="solo_deriva_sentencias_implicadas_logicamente">Que preserva la verdad: toda sentencia α derivada por el algoritmo (KB ⊢ α) es también una consecuencia lógica verdadera en todos los modelos de la KB (KB ⊨ α)</option>
-                <option value="ignora_la_base_de_conocimiento">Que opera sin consultar las premisas almacenadas en la Base de Conocimiento</option>
-                <option value="requiere_infinitos_modelos_abiertos">Que solo funciona cuando las variables proposicionales tienen tres valores de verdad</option>
+                <option value="deriva_cualquier_sentencia_falsa_rapido">Que deriva todas las sentencias verdaderas del dominio sin omitir soluciones.</option>
+                <option value="ignora_la_base_de_conocimiento">Que evalúa la satisfacibilidad de cualquier fórmula en tiempo polinomial.</option>
+                <option value="solo_deriva_sentencias_implicadas_logicamente">Que solo deriva sentencias implicadas lógicamente por la base de conocimiento.</option>
+                <option value="requiere_infinitos_modelos_abiertos">Que mantiene la consistencia sintáctica ignorando las interpretaciones semánticas.</option>
               </select>
             </div>
           </div>
@@ -581,25 +537,14 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej4_teoria_tp4" data-key="item_clasificacion_sentencia_valida" aria-label="4. Clasificación Semántica de Sentencias Proposicionales:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="insatisfacible_contradiccion">Insatisfacible (Contradicción): falsa en todas las interpretaciones posibles</option>
-                <option value="contingente_empirica">Contingente: verdadera en algunos modelos y falsa en otros según el estado del mundo</option>
-                <option value="valida_tautologia">Válida (Tautología): verdadera en todos los modelos posibles para cualquier asignación de verdad</option>
-                <option value="indecidible_proposicional">Indecidible: imposible de evaluar mediante tablas de verdad finitas</option>
+                <option value="insatisfacible_contradiccion">Insatisfacible: sentencia que resulta falsa en todas las interpretaciones posibles.</option>
+                <option value="contingente_empirica">Contingente: sentencia verdadera en algunos modelos y falsa en otros del dominio.</option>
+                <option value="indecidible_proposicional">Indecidible: fórmula cuya verdad no puede evaluarse mediante tablas de verdad.</option>
+                <option value="valida_tautologia">Válida (Tautología): sentencia verdadera en todos los modelos posibles del lenguaje.</option>
               </select>
             </div>
           </div>
         </div>
-
-        <!-- Orientación Bibliográfica Oficial -->
-        <details class="group mt-4 rounded-xl border border-[#1569AE]/30 bg-[#F4F6F9] dark:bg-[#01182E]/80 p-3.5 text-xs text-slate-700 dark:text-slate-200 transition-all">
-          <summary class="flex cursor-pointer items-center justify-between font-bold text-[#01305B] dark:text-[#FFED00] select-none">
-            <span>📖 Dónde estudiar y repasar este tema en la bibliografía oficial de cátedra</span>
-            <span class="transition group-open:rotate-180">▾</span>
-          </summary>
-          <div class="mt-2.5 pt-2.5 border-t border-slate-300 dark:border-[#154D80] space-y-1">
-            <p><strong>Referencia Bibliográfica:</strong> <a href="http://jdelagarza.fime.uanl.mx/IA/Libros/inteligencia-artificial-un-enfoque-moderno-stuart-j-russell.pdf" target="_blank" rel="noopener noreferrer" class="underline text-[#1569AE] dark:text-[#6EC1E4] hover:text-[#01305B] font-semibold">Russell &amp; Norvig — Inteligencia Artificial: Un Enfoque Moderno</a> &bull; Russell & Norvig Cap. 7.1–7.5 (pp. 194–215) • Diapositivas Clase 5 (`5 - Conocimiento y Razonamiento.pptx`).</p>
-          </div>
-        </details>
       </article>
       <!-- =====================================================================
            EJERCICIO T5: LÓGICA DE PRIMER ORDEN (LPO) Y CUANTIFICACIÓN FORMAL
@@ -631,10 +576,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej5_teoria_tp5" data-key="item_compromiso_ontologico_lpo" aria-label="1. Compromiso Ontológico de la Lógica de Primer Orden (LPO):" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="solo_variables_booleanas_sin_estructura">Únicamente letras proposicionales indivisibles sin estructura interna</option>
-                <option value="objetos_relaciones_y_funciones">Objetos individuales del dominio, relaciones (propiedades/predicados sobre tuplas) y funciones (mapeos de objetos a un único objeto)</option>
-                <option value="probabilidades_difusas_continuas">Distribuciones de probabilidad continuas sin objetos discretos</option>
-                <option value="exclusivamente_numeros_enteros">Únicamente constantes numéricas enteras y operadores aritméticos</option>
+                <option value="objetos_relaciones_y_funciones">Objetos individuales del dominio, relaciones (predicados) y funciones entre objetos.</option>
+                <option value="solo_variables_booleanas_sin_estructura">Únicamente proposiciones indivisibles sin relaciones internas ni argumentos.</option>
+                <option value="probabilidades_difusas_continuas">Distribuciones de probabilidad continua sobre eventos no estructurados.</option>
+                <option value="exclusivamente_numeros_enteros">Constantes numéricas enteras y operadores de asignación imperativa.</option>
               </select>
             </div>
           </div>
@@ -647,10 +592,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej5_teoria_tp5" data-key="item_clasificacion_sintaxis_funcion" aria-label="2. Sintaxis Formal de LPO (Términos vs. Sentencias Atómicas):" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="ambos_son_conectivos_logicos">Ambos son conectivos lógicos binarios equivalentes a la implicación</option>
-                <option value="termino_objeto_vs_sentencia_atomica_verdad">PadreDe(Juan) es un término complejo (función que referencia a un objeto) y Rey(PadreDe(Juan)) es una sentencia atómica con valor de verdad</option>
-                <option value="variable_libre_vs_constante">PadreDe(Juan) es una sentencia compuesta y Rey es una variable cuantificada</option>
-                <option value="cuantificador_existencial_skolem">Ambos son axiomas proposicionales sin argumentos</option>
+                <option value="ambos_son_conectivos_logicos">Ambos son conectivos lógicos binarios que vinculan constantes del dominio.</option>
+                <option value="termino_objeto_vs_sentencia_atomica_verdad">PadreDe(Juan) es un término que denota un objeto y Rey(...) es una sentencia con valor de verdad.</option>
+                <option value="variable_libre_vs_constante">PadreDe(Juan) es una sentencia compuesta y Rey es una variable lógica cuantificada.</option>
+                <option value="cuantificador_existencial_skolem">Ambos son símbolos de predicado evaluables como verdaderos o falsos.</option>
               </select>
             </div>
           </div>
@@ -663,10 +608,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej5_teoria_tp5" data-key="item_cuantificador_universal_conector" aria-label="3. Cuantificación Universal Canónica (∀):" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="usar_conjuncion_porque_restringe">Debe usarse ∧: ∀x (RobotSoldador(x) ∧ AltaTension(x)), porque restringe el dominio solo a los robots</option>
-                <option value="usar_implicacion_evita_afirmar_todo_universo">Debe usarse ⇒: ∀x (RobotSoldador(x) ⇒ AltaTension(x)); usar ∧ afirmaría erróneamente que todos los objetos del universo son robots soldadores y operan en alta tensión</option>
-                <option value="usar_disyuncion_exclusiva">Debe usarse ⊕ (XOR) para excluir a los robots de ensamblaje</option>
-                <option value="no_requiere_conectivo_logico">No se permite usar conectivos lógicos dentro del alcance de ∀x</option>
+                <option value="usar_conjuncion_porque_restringe">Debe usarse ∧: ∀x (RobotSoldador(x) ∧ AltaTension(x)), pues une dos propiedades simultáneas.</option>
+                <option value="usar_disyuncion_exclusiva">Debe usarse ∨: ∀x (RobotSoldador(x) ∨ AltaTension(x)), pues permite casos alternativos de robots.</option>
+                <option value="usar_implicacion_evita_afirmar_todo_universo">Debe usarse ⇒: ∀x (RobotSoldador(x) ⇒ AltaTension(x)), pues ∧ afirmaría que todo en el universo es robot.</option>
+                <option value="no_requiere_conectivo_logico">Debe usarse ⇔: ∀x (RobotSoldador(x) ⇔ AltaTension(x)), pues restringe la tensión exclusivamente a robots.</option>
               </select>
             </div>
           </div>
@@ -679,25 +624,14 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej5_teoria_tp5" data-key="item_cuantificador_existencial_conector" aria-label="4. Cuantificación Existencial Canónica (∃):" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="existencial_con_implicacion">∃x (AlumnoUCSE(x) ⇒ ProgramaProlog(x)), porque ⇒ vincula sujeto y predicado existencial</option>
-                <option value="existencial_con_conjuncion_evita_trivialidad">∃x (AlumnoUCSE(x) ∧ ProgramaProlog(x)); si se usara ⇒, la sentencia sería trivialmente verdadera ante cualquier objeto del universo que no sea alumno de la UCSE</option>
-                <option value="universal_negado_con_implicacion">∀x (AlumnoUCSE(x) ∧ ¬ProgramaProlog(x))</option>
-                <option value="existencial_con_bicondicional">∃x (AlumnoUCSE(x) ⇔ ProgramaProlog(x))</option>
+                <option value="existencial_con_implicacion">∃x (AlumnoUCSE(x) ⇒ ProgramaProlog(x)); la implicación es el conectivo general para cuantificadores.</option>
+                <option value="universal_negado_con_implicacion">∃x (AlumnoUCSE(x) ∨ ProgramaProlog(x)); la disyunción garantiza que al menos una propiedad se cumpla.</option>
+                <option value="existencial_con_bicondicional">∃x (AlumnoUCSE(x) ⇔ ProgramaProlog(x)); el bicondicional exige equivalencia exacta entre ambas condiciones.</option>
+                <option value="existencial_con_conjuncion_evita_trivialidad">∃x (AlumnoUCSE(x) ∧ ProgramaProlog(x)); usar ⇒ la volvería trivialmente verdadera si existe un no-alumno.</option>
               </select>
             </div>
           </div>
         </div>
-
-        <!-- Orientación Bibliográfica Oficial -->
-        <details class="group mt-4 rounded-xl border border-[#1569AE]/30 bg-[#F4F6F9] dark:bg-[#01182E]/80 p-3.5 text-xs text-slate-700 dark:text-slate-200 transition-all">
-          <summary class="flex cursor-pointer items-center justify-between font-bold text-[#01305B] dark:text-[#FFED00] select-none">
-            <span>📖 Dónde estudiar y repasar este tema en la bibliografía oficial de cátedra</span>
-            <span class="transition group-open:rotate-180">▾</span>
-          </summary>
-          <div class="mt-2.5 pt-2.5 border-t border-slate-300 dark:border-[#154D80] space-y-1">
-            <p><strong>Referencia Bibliográfica:</strong> <a href="http://jdelagarza.fime.uanl.mx/IA/Libros/inteligencia-artificial-un-enfoque-moderno-stuart-j-russell.pdf" target="_blank" rel="noopener noreferrer" class="underline text-[#1569AE] dark:text-[#6EC1E4] hover:text-[#01305B] font-semibold">Russell &amp; Norvig — Inteligencia Artificial: Un Enfoque Moderno</a> &bull; Russell & Norvig Cap. 8.1–8.3 (pp. 240–258) • Diapositivas Clase 6 (`6 - Lógica de Primer Orden.pptx`, Slides 2–11).</p>
-          </div>
-        </details>
       </article>
     </section>
 
@@ -735,91 +669,91 @@
         <!-- Enunciado y Tarjetas de Especificación del Dominio -->
         <div class="space-y-4 text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
           <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
-            <p class="max-w-3xl">Estás desarrollando el módulo declarativo de asignación de guardias para el Hospital Universitario. A partir de las fichas técnicas de los 3 profesionales médicos que se muestran abajo, debes codificar los 9 hechos de la base de conocimientos y las 2 reglas deductivas solicitadas:</p>
+            <p class="max-w-3xl">El Hospital Universitario atiende emergencias mediante un sistema de triaje automatizado. A partir de las especificaciones de los 3 médicos de guardia, debes codificar los 9 hechos de la base de conocimientos y las 2 reglas deductivas solicitadas:</p>
             <div class="inline-flex flex-wrap items-center gap-1.5 p-1.5 rounded-xl bg-slate-100 dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs shrink-0">
-              <button type="button" class="filter-btn filter-d1-btn px-3 py-1.5 rounded-lg active transition text-slate-700 dark:text-slate-200 font-medium" data-filter="all">🏥 Todos los Médicos</button>
-              <button type="button" class="filter-btn filter-d1-btn px-3 py-1.5 rounded-lg  transition text-slate-700 dark:text-slate-200 font-medium" data-filter="alta">🔴 Complejidad Alta</button>
-              <button type="button" class="filter-btn filter-d1-btn px-3 py-1.5 rounded-lg  transition text-slate-700 dark:text-slate-200 font-medium" data-filter="media">🟡 Complejidad Media</button>
+              <button type="button" class="filter-btn filter-d1-btn px-3 py-1.5 rounded-lg active transition text-slate-700 dark:text-slate-200 font-medium" data-filter="all">🩺 Todos los Médicos</button>
+              <button type="button" class="filter-btn filter-d1-btn px-3 py-1.5 rounded-lg  transition text-slate-700 dark:text-slate-200 font-medium" data-filter="manana">☀️ Turno Mañana</button>
+              <button type="button" class="filter-btn filter-d1-btn px-3 py-1.5 rounded-lg  transition text-slate-700 dark:text-slate-200 font-medium" data-filter="noche">🌙 Turno Noche</button>
             </div>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-1">
-            <div class="domain1-card p-5 rounded-xl bg-[#F4F6F9] dark:bg-[#012243] border border-slate-200 dark:border-[#154D80] hover:border-[#0080FB] transition-all duration-300 shadow-sm space-y-3.5" data-category="alta">
+            <div class="domain1-card p-5 rounded-xl bg-[#F4F6F9] dark:bg-[#012243] border border-slate-200 dark:border-[#154D80] hover:border-[#0080FB] transition-all duration-300 shadow-sm space-y-3.5" data-category="manana">
               <div class="flex items-center justify-between gap-2">
-                <span class="font-bold text-[#01305B] dark:text-white text-sm">👩‍⚕️ Médica 1: Dra. Sosa</span>
-                <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold border bg-rose-500/10 text-rose-700 dark:text-rose-300 border-rose-500/30">
-                  🔴 Complejidad: alta
-                </span>
-              </div>
-              <div class="space-y-1.5">
-                <span class="text-[11px] text-slate-500 dark:text-slate-400 uppercase tracking-wider block font-bold">Datos Técnicos a Modelar en Prolog:</span>
-                <div class="flex flex-col gap-1.5">
-                  <span class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs text-[#01305B] dark:text-slate-100 flex items-center gap-1.5">
-                    <span aria-hidden="true">🆔</span> <span>Átomo médico: dra_sosa</span>
-                  </span>
-                  <span class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs text-[#01305B] dark:text-slate-100 flex items-center gap-1.5">
-                    <span aria-hidden="true">🫀</span> <span>Especialidad: cardiologia (complejidad: alta)</span>
-                  </span>
-                  <span class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs text-[#01305B] dark:text-slate-100 flex items-center gap-1.5">
-                    <span aria-hidden="true">🌅</span> <span>Franja de turno: manana</span>
-                  </span>
-                </div>
-              </div>
-              <div class="pt-2 border-t border-slate-200 dark:border-[#154D80] flex items-center justify-between text-xs text-slate-600 dark:text-slate-300 font-medium">
-                <span>Servicio: Cardiología</span>
-                <span class="text-[#1569AE] dark:text-[#FFED00] font-bold">Turno: manana</span>
-              </div>
-            </div>
-            <div class="domain1-card p-5 rounded-xl bg-[#F4F6F9] dark:bg-[#012243] border border-slate-200 dark:border-[#154D80] hover:border-[#0080FB] transition-all duration-300 shadow-sm space-y-3.5" data-category="alta">
-              <div class="flex items-center justify-between gap-2">
-                <span class="font-bold text-[#01305B] dark:text-white text-sm">👨‍⚕️ Médico 2: Dr. Paz</span>
-                <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold border bg-rose-500/10 text-rose-700 dark:text-rose-300 border-rose-500/30">
-                  🔴 Complejidad: alta
-                </span>
-              </div>
-              <div class="space-y-1.5">
-                <span class="text-[11px] text-slate-500 dark:text-slate-400 uppercase tracking-wider block font-bold">Datos Técnicos a Modelar en Prolog:</span>
-                <div class="flex flex-col gap-1.5">
-                  <span class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs text-[#01305B] dark:text-slate-100 flex items-center gap-1.5">
-                    <span aria-hidden="true">🆔</span> <span>Átomo médico: dr_paz</span>
-                  </span>
-                  <span class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs text-[#01305B] dark:text-slate-100 flex items-center gap-1.5">
-                    <span aria-hidden="true">🦴</span> <span>Especialidad: traumatologia (complejidad: alta)</span>
-                  </span>
-                  <span class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs text-[#01305B] dark:text-slate-100 flex items-center gap-1.5">
-                    <span aria-hidden="true">🌙</span> <span>Franja de turno: noche</span>
-                  </span>
-                </div>
-              </div>
-              <div class="pt-2 border-t border-slate-200 dark:border-[#154D80] flex items-center justify-between text-xs text-slate-600 dark:text-slate-300 font-medium">
-                <span>Servicio: Traumatología</span>
-                <span class="text-[#1569AE] dark:text-[#FFED00] font-bold">Turno: noche</span>
-              </div>
-            </div>
-            <div class="domain1-card p-5 rounded-xl bg-[#F4F6F9] dark:bg-[#012243] border border-slate-200 dark:border-[#154D80] hover:border-[#0080FB] transition-all duration-300 shadow-sm space-y-3.5" data-category="media">
-              <div class="flex items-center justify-between gap-2">
-                <span class="font-bold text-[#01305B] dark:text-white text-sm">👩‍⚕️ Médica 3: Dra. Luna</span>
+                <span class="font-bold text-[#01305B] dark:text-white text-sm">🩺 Médica 1: Dra. Sosa</span>
                 <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold border bg-amber-500/10 text-amber-700 dark:text-amber-300 border-amber-500/30">
-                  🟡 Complejidad: media
+                  ☀️ Turno: Mañana
                 </span>
               </div>
               <div class="space-y-1.5">
                 <span class="text-[11px] text-slate-500 dark:text-slate-400 uppercase tracking-wider block font-bold">Datos Técnicos a Modelar en Prolog:</span>
                 <div class="flex flex-col gap-1.5">
                   <span class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs text-[#01305B] dark:text-slate-100 flex items-center gap-1.5">
-                    <span aria-hidden="true">🆔</span> <span>Átomo médico: dra_luna</span>
+                    <span aria-hidden="true">❤️</span> <span>Especialidad asignada: cardiologia</span>
                   </span>
                   <span class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs text-[#01305B] dark:text-slate-100 flex items-center gap-1.5">
-                    <span aria-hidden="true">🧸</span> <span>Especialidad: pediatria (complejidad: media)</span>
+                    <span aria-hidden="true">⏰</span> <span>Franja de guardia: manana</span>
                   </span>
                   <span class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs text-[#01305B] dark:text-slate-100 flex items-center gap-1.5">
-                    <span aria-hidden="true">🌅</span> <span>Franja de turno: manana</span>
+                    <span aria-hidden="true">⚡</span> <span>Nivel de complejidad: alta</span>
                   </span>
                 </div>
               </div>
               <div class="pt-2 border-t border-slate-200 dark:border-[#154D80] flex items-center justify-between text-xs text-slate-600 dark:text-slate-300 font-medium">
-                <span>Servicio: Pediatría</span>
-                <span class="text-[#1569AE] dark:text-[#FFED00] font-bold">Turno: manana</span>
+                <span>Servicio: cardiologia</span>
+                <span class="text-[#1569AE] dark:text-[#FFED00] font-bold">Complejidad: alta</span>
+              </div>
+            </div>
+            <div class="domain1-card p-5 rounded-xl bg-[#F4F6F9] dark:bg-[#012243] border border-slate-200 dark:border-[#154D80] hover:border-[#0080FB] transition-all duration-300 shadow-sm space-y-3.5" data-category="noche">
+              <div class="flex items-center justify-between gap-2">
+                <span class="font-bold text-[#01305B] dark:text-white text-sm">🩺 Médico 2: Dr. Paz</span>
+                <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold border bg-indigo-500/10 text-indigo-700 dark:text-indigo-300 border-indigo-500/30">
+                  🌙 Turno: Noche
+                </span>
+              </div>
+              <div class="space-y-1.5">
+                <span class="text-[11px] text-slate-500 dark:text-slate-400 uppercase tracking-wider block font-bold">Datos Técnicos a Modelar en Prolog:</span>
+                <div class="flex flex-col gap-1.5">
+                  <span class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs text-[#01305B] dark:text-slate-100 flex items-center gap-1.5">
+                    <span aria-hidden="true">🦴</span> <span>Especialidad asignada: traumatologia</span>
+                  </span>
+                  <span class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs text-[#01305B] dark:text-slate-100 flex items-center gap-1.5">
+                    <span aria-hidden="true">⏰</span> <span>Franja de guardia: noche</span>
+                  </span>
+                  <span class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs text-[#01305B] dark:text-slate-100 flex items-center gap-1.5">
+                    <span aria-hidden="true">⚡</span> <span>Nivel de complejidad: alta</span>
+                  </span>
+                </div>
+              </div>
+              <div class="pt-2 border-t border-slate-200 dark:border-[#154D80] flex items-center justify-between text-xs text-slate-600 dark:text-slate-300 font-medium">
+                <span>Servicio: traumatologia</span>
+                <span class="text-[#1569AE] dark:text-[#FFED00] font-bold">Complejidad: alta</span>
+              </div>
+            </div>
+            <div class="domain1-card p-5 rounded-xl bg-[#F4F6F9] dark:bg-[#012243] border border-slate-200 dark:border-[#154D80] hover:border-[#0080FB] transition-all duration-300 shadow-sm space-y-3.5" data-category="manana">
+              <div class="flex items-center justify-between gap-2">
+                <span class="font-bold text-[#01305B] dark:text-white text-sm">🩺 Médica 3: Dra. Luna</span>
+                <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold border bg-amber-500/10 text-amber-700 dark:text-amber-300 border-amber-500/30">
+                  ☀️ Turno: Mañana
+                </span>
+              </div>
+              <div class="space-y-1.5">
+                <span class="text-[11px] text-slate-500 dark:text-slate-400 uppercase tracking-wider block font-bold">Datos Técnicos a Modelar en Prolog:</span>
+                <div class="flex flex-col gap-1.5">
+                  <span class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs text-[#01305B] dark:text-slate-100 flex items-center gap-1.5">
+                    <span aria-hidden="true">🧸</span> <span>Especialidad asignada: pediatria</span>
+                  </span>
+                  <span class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs text-[#01305B] dark:text-slate-100 flex items-center gap-1.5">
+                    <span aria-hidden="true">⏰</span> <span>Franja de guardia: manana</span>
+                  </span>
+                  <span class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs text-[#01305B] dark:text-slate-100 flex items-center gap-1.5">
+                    <span aria-hidden="true">🔹</span> <span>Nivel de complejidad: media</span>
+                  </span>
+                </div>
+              </div>
+              <div class="pt-2 border-t border-slate-200 dark:border-[#154D80] flex items-center justify-between text-xs text-slate-600 dark:text-slate-300 font-medium">
+                <span>Servicio: pediatria</span>
+                <span class="text-[#1569AE] dark:text-[#FFED00] font-bold">Complejidad: media</span>
               </div>
             </div>
           </div>
@@ -835,35 +769,35 @@
                   <span class="px-2 py-0.5 rounded text-[10px] font-extrabold bg-[#1569AE]/15 text-[#01305B] dark:text-[#6EC1E4] shrink-0">Hechos (3 × 1 pt)</span>
                   <code class="text-xs font-bold prolog-code text-[#01305B] dark:text-[#FFED00]">atiende(Medico, Especialidad)</code>
                 </div>
-                <span class="text-xs text-slate-600 dark:text-slate-300">Hecho binario (/2): relaciona cada médico con la especialidad que atiende.</span>
+                <span class="text-xs text-slate-600 dark:text-slate-300">Hecho binario (/2): asocia cada médico ('dra_sosa', 'dr_paz', 'dra_luna') con su especialidad ('cardiologia', 'traumatologia', 'pediatria').</span>
               </div>
               <div class="flex flex-col sm:flex-row sm:items-center justify-between p-2.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] gap-2">
                 <div class="flex items-center gap-2">
                   <span class="px-2 py-0.5 rounded text-[10px] font-extrabold bg-[#1569AE]/15 text-[#01305B] dark:text-[#6EC1E4] shrink-0">Hechos (3 × 1 pt)</span>
-                  <code class="text-xs font-bold prolog-code text-[#01305B] dark:text-[#FFED00]">turno(Medico, FranjaHoraria)</code>
+                  <code class="text-xs font-bold prolog-code text-[#01305B] dark:text-[#FFED00]">turno(Medico, Franja)</code>
                 </div>
-                <span class="text-xs text-slate-600 dark:text-slate-300">Hecho binario (/2): indica la franja horaria ('manana' o 'noche') del médico.</span>
+                <span class="text-xs text-slate-600 dark:text-slate-300">Hecho binario (/2): declara el horario asignado ('manana' o 'noche') de cada médico.</span>
               </div>
               <div class="flex flex-col sm:flex-row sm:items-center justify-between p-2.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] gap-2">
                 <div class="flex items-center gap-2">
                   <span class="px-2 py-0.5 rounded text-[10px] font-extrabold bg-[#1569AE]/15 text-[#01305B] dark:text-[#6EC1E4] shrink-0">Hechos (3 × 1 pt)</span>
                   <code class="text-xs font-bold prolog-code text-[#01305B] dark:text-[#FFED00]">complejidad(Especialidad, Nivel)</code>
                 </div>
-                <span class="text-xs text-slate-600 dark:text-slate-300">Hecho binario (/2): define el nivel de complejidad ('alta' o 'media') de cada especialidad.</span>
+                <span class="text-xs text-slate-600 dark:text-slate-300">Hecho binario (/2): califica la severidad ('alta' o 'media') de cada servicio médico.</span>
               </div>
               <div class="flex flex-col sm:flex-row sm:items-center justify-between p-2.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] gap-2">
                 <div class="flex items-center gap-2">
                   <span class="px-2 py-0.5 rounded text-[10px] font-extrabold bg-[#FFED00] text-[#01305B] shrink-0">Regla (2 pts)</span>
                   <code class="text-xs font-bold prolog-code text-[#01305B] dark:text-[#FFED00]">guardia_critica(Medico)</code>
                 </div>
-                <span class="text-xs text-slate-600 dark:text-slate-300">Regla deductiva (/1): verdadero si el Medico atiende una Especialidad cuya complejidad es 'alta'.</span>
+                <span class="text-xs text-slate-600 dark:text-slate-300">Regla deductiva (/1): verdadero si el médico atiende una especialidad cuya complejidad es 'alta'.</span>
               </div>
               <div class="flex flex-col sm:flex-row sm:items-center justify-between p-2.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] gap-2">
                 <div class="flex items-center gap-2">
                   <span class="px-2 py-0.5 rounded text-[10px] font-extrabold bg-[#FFED00] text-[#01305B] shrink-0">Regla (2 pts)</span>
                   <code class="text-xs font-bold prolog-code text-[#01305B] dark:text-[#FFED00]">especialista_manana(Medico, Especialidad)</code>
                 </div>
-                <span class="text-xs text-slate-600 dark:text-slate-300">Regla deductiva (/2): verdadero si el Medico atiende la Especialidad y su turno es 'manana'.</span>
+                <span class="text-xs text-slate-600 dark:text-slate-300">Regla deductiva (/2): verdadero si el médico atiende esa Especialidad y su turno es 'manana'.</span>
               </div>
             </div>
           </div>
@@ -905,11 +839,11 @@
 % 2. Escribe aquí las 2 reglas (guardia_critica/1 y especialista_manana/2):
 </textarea>
 
-          <!-- Panel de Validador Sintáctico en Tiempo Real (Linter Prolog) -->
+          <!-- Panel de Verificador preliminar de estructura y sintaxis básica de Prolog -->
           <div id="linter-panel-1" class="p-3.5 rounded-xl bg-[#01305B]/90 border border-[#6EC1E4]/40 space-y-2 text-xs">
             <div class="flex flex-wrap items-center justify-between gap-2">
               <span class="font-extrabold text-[#6EC1E4] flex items-center gap-1.5">
-                <span>🔍</span> Validador Sintáctico de Edimburgo en Tiempo Real:
+                <span>🔍</span> Verificador preliminar de estructura y sintaxis básica de Prolog:
               </span>
               <div class="flex flex-wrap items-center gap-2">
                 <span id="linter-facts-1" class="px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-200 font-bold border border-slate-600">
@@ -918,11 +852,14 @@
                 <span id="linter-rules-1" class="px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-200 font-bold border border-slate-600">
                   Reglas deductivas: 0 / 2
                 </span>
-                <span id="linter-status-1" class="px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 font-bold border border-amber-400/40">
+                <span id="linter-status-1" class="px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 font-bold border border-slate-600">
                   ⏳ Pendiente de codificar
                 </span>
               </div>
             </div>
+            <p class="text-[11px] text-amber-200/90 italic">
+              ⚠️ Este verificador brinda orientación y no reemplaza la ejecución en SWI-Prolog.
+            </p>
             <div id="linter-preds-1" class="text-[11px] text-slate-300 prolog-code"></div>
             <ul id="linter-warnings-1" class="space-y-1 text-amber-300 text-[11px] list-disc list-inside"></ul>
           </div>
@@ -957,10 +894,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej6_practica_caso1" data-key="item_proposito_discontiguous_hospital" aria-label="1. Directiva de compilación y estructura de predicados:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la opción en Prolog --</option>
-                <option value="ordena_alfabeticamente_los_medicos">Ordena alfabéticamente los hechos antes de ejecutar el motor de inferencia</option>
-                <option value="permite_agrupar_hechos_por_entidad_sin_warning">Permite declarar cláusulas de un mismo predicado/aridad separadas entre sí (por ejemplo agrupadas por médico) sin que SWI-Prolog emita advertencias</option>
-                <option value="convierte_atomos_en_variables_globales">Transforma automáticamente los átomos en variables globales exportables</option>
-                <option value="activa_encadenamiento_hacia_adelante">Desactiva la resolución SLD y fuerza encadenamiento hacia adelante</option>
+                <option value="permite_agrupar_hechos_por_entidad_sin_warning">Permite agrupar cláusulas del mismo predicado de forma dispersa sin advertencias.</option>
+                <option value="ordena_alfabeticamente_los_medicos">Ordena los hechos de forma ascendente antes de iniciar la resolución SLD.</option>
+                <option value="convierte_atomos_en_variables_globales">Convierte los átomos constantes en variables globales accesibles desde la consola.</option>
+                <option value="activa_encadenamiento_hacia_adelante">Desactiva la búsqueda hacia atrás obligando al uso de encadenamiento hacia adelante.</option>
               </select>
             </div>
           </div>
@@ -989,10 +926,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej6_practica_caso1" data-key="item_backtracking_guardia_critica" aria-label="3. Mecanismo de Backtracking en la consulta existencial guardia_critica(Medico).:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la opción en Prolog --</option>
-                <option value="solo_dra_luna_y_termina">Devuelve únicamente Medico = dra_luna</option>
-                <option value="dra_sosa_luego_dr_paz_y_false">Devuelve primero Medico = dra_sosa, al pedir otra solución (;) devuelve Medico = dr_paz, y finalmente false al agotar la rama de dra_luna</option>
-                <option value="devuelve_true_sin_ligar_variable">Devuelve únicamente el booleano true sin mostrar el nombre de los médicos</option>
-                <option value="cicla_infinitamente_entre_sosa_y_paz">Repite infinitamente dra_sosa y dr_paz sin detenerse</option>
+                <option value="solo_dra_luna_y_termina">Devuelve Medico = dra_luna y luego finaliza con false.</option>
+                <option value="devuelve_true_sin_ligar_variable">Devuelve true sin ligar la variable al evaluar solo la cabeza de la regla.</option>
+                <option value="dra_sosa_luego_dr_paz_y_false">Devuelve Medico = dra_sosa, luego Medico = dr_paz, y finaliza con false.</option>
+                <option value="cicla_infinitamente_entre_sosa_y_paz">Devuelve simultáneamente los tres médicos sin requerir el operador punto y coma.</option>
               </select>
             </div>
           </div>
@@ -1005,10 +942,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej6_practica_caso1" data-key="item_evaluacion_paz_critica" aria-label="4. Resolución SLD de la consulta cerrada guardia_critica(dr_paz).:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la opción en Prolog --</option>
-                <option value="false_porque_trabaja_de_noche">false, porque el Dr. Paz cumple turno de noche y no de mañana</option>
-                <option value="true_unifica_traumatologia_complejidad_alta">true, porque unifica la variable intermedia con traumatologia y verifica que su complejidad es alta</option>
-                <option value="error_variable_no_instanciada">Error de ejecución por usar constantes sin comillas dobles</option>
-                <option value="esp_igual_cardiologia">Devuelve Especialidad = cardiologia por backtracking automático</option>
+                <option value="false_porque_trabaja_de_noche">false, pues el médico asignado cumple turno de noche en lugar de turno mañana.</option>
+                <option value="error_variable_no_instanciada">false, pues la regla de guardia crítica solo evalúa médicos con turno diurno.</option>
+                <option value="esp_igual_cardiologia">true, pero ligando una variable no instanciada adicional en la respuesta.</option>
+                <option value="true_unifica_traumatologia_complejidad_alta">true, pues unifica con traumatología y dicha especialidad posee complejidad alta.</option>
               </select>
             </div>
           </div>
@@ -1021,10 +958,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej6_practica_caso1" data-key="item_consulta_especialista_manana_conjuncion" aria-label="5. Evaluación de la regla conjuntiva especialista_manana(dr_paz, Especialidad).:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la opción en Prolog --</option>
-                <option value="unifica_traumatologia_con_exito">Unifica Especialidad = traumatologia y devuelve true</option>
-                <option value="falla_en_segunda_submeta_turno_manana">La primera submeta liga Especialidad = traumatologia, pero la segunda submeta falla porque el Dr. Paz tiene turno noche, retornando false</option>
-                <option value="cambia_el_turno_a_manana">Modifica dinámicamente la base de hechos asignándole turno mañana</option>
-                <option value="retorna_dra_sosa">Reemplaza dr_paz por dra_sosa y devuelve cardiologia</option>
+                <option value="falla_en_segunda_submeta_turno_manana">false, pues la primera submeta unifica pero la segunda falla por tener turno noche.</option>
+                <option value="unifica_traumatologia_con_exito">true, pues unifica Especialidad = traumatología ignorando la submeta de turno.</option>
+                <option value="cambia_el_turno_a_manana">false, pues el médico no registra asignación de especialidad en los hechos.</option>
+                <option value="retorna_dra_sosa">true, pues deriva automáticamente un turno alternativo mediante backtracking.</option>
               </select>
             </div>
           </div>
@@ -1037,25 +974,14 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej6_practica_caso1" data-key="item_evaluacion_luna_critica_cwa" aria-label="6. Supuesto de Mundo Cerrado (CWA) y Negación como Falla en \+ guardia_critica(dra_luna).:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la opción en Prolog --</option>
-                <option value="false_porque_dra_luna_existe">false, porque dra_luna está registrada como médica del hospital</option>
-                <option value="true_porque_guardia_critica_falla_bajo_cwa">true, porque guardia_critica(dra_luna) falla bajo CWA (pediatría tiene complejidad media, no alta) y el operador de Negación como Falla (\+) invierte el fallo a éxito</option>
-                <option value="unknown_indeterminado">unknown, ya que Prolog opera con lógica trivalente abierta</option>
-                <option value="syntax_error_operador_naf">Error de sintaxis porque Prolog no admite el operador \+</option>
+                <option value="false_porque_dra_luna_existe">false, pues dra_luna figura registrada como médica en la base de conocimientos.</option>
+                <option value="true_porque_guardia_critica_falla_bajo_cwa">true, pues guardia_critica(dra_luna) falla bajo CWA y \+ invierte el fallo en éxito.</option>
+                <option value="unknown_indeterminado">false, pues la negación como falla no admite argumentos con términos ground.</option>
+                <option value="error_operador_negacion">unknown, pues Prolog suspende la meta ante la ausencia de una regla explícita.</option>
               </select>
             </div>
           </div>
         </div>
-
-        <!-- Orientación Bibliográfica Oficial -->
-        <details class="group mt-4 rounded-xl border border-[#1569AE]/30 bg-[#F4F6F9] dark:bg-[#01182E]/80 p-3.5 text-xs text-slate-700 dark:text-slate-200 transition-all">
-          <summary class="flex cursor-pointer items-center justify-between font-bold text-[#01305B] dark:text-[#FFED00] select-none">
-            <span>📖 Dónde estudiar este tema en la bibliografía oficial de cátedra</span>
-            <span class="transition group-open:rotate-180">▾</span>
-          </summary>
-          <div class="mt-2.5 pt-2.5 border-t border-slate-300 dark:border-[#154D80] space-y-1">
-            <p><strong>Referencia Bibliográfica:</strong> <a href="http://jdelagarza.fime.uanl.mx/IA/Libros/inteligencia-artificial-un-enfoque-moderno-stuart-j-russell.pdf" target="_blank" rel="noopener noreferrer" class="underline text-[#1569AE] dark:text-[#6EC1E4] hover:text-[#01305B] font-semibold">Russell &amp; Norvig — Inteligencia Artificial: Un Enfoque Moderno</a> &bull; Russell & Norvig Cap. 9.4–9.5 (pp. 302–308) • Diapositivas Clase 7 (`7 - Lógica aplicada en PROLOG.pptx`, Slides 6–17).</p>
-          </div>
-        </details>
       </article>
       <!-- =====================================================================
            EJERCICIO P2: RED DE SENSORES IOT Y RIEGO INTELIGENTE AGROINDUSTRIAL (PROLOG)
@@ -1077,28 +1003,25 @@
         <!-- Enunciado y Tarjetas de Especificación del Dominio -->
         <div class="space-y-4 text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
           <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
-            <p class="max-w-3xl">Una finca tecnificada de los valles templados monitorea sus 3 lotes agrícolas mediante sensores IoT. A partir de las tarjetas técnicas del dominio, debes codificar en el editor los 9 hechos y las 2 reglas deductivas solicitadas:</p>
+            <p class="max-w-3xl">Una finca vitivinícola y tabacalera supervisa 3 lotes agrícolas con telemetría de suelo. A partir de las especificaciones de las tarjetas de campo, debes codificar los 9 hechos de la base de conocimientos y las 2 reglas deductivas solicitadas:</p>
             <div class="inline-flex flex-wrap items-center gap-1.5 p-1.5 rounded-xl bg-slate-100 dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs shrink-0">
               <button type="button" class="filter-btn filter-d2-btn px-3 py-1.5 rounded-lg active transition text-slate-700 dark:text-slate-200 font-medium" data-filter="all">🌱 Todos los Lotes</button>
-              <button type="button" class="filter-btn filter-d2-btn px-3 py-1.5 rounded-lg  transition text-slate-700 dark:text-slate-200 font-medium" data-filter="seco">🟠 Suelo Seco</button>
-              <button type="button" class="filter-btn filter-d2-btn px-3 py-1.5 rounded-lg  transition text-slate-700 dark:text-slate-200 font-medium" data-filter="optimo">🟢 Suelo Óptimo</button>
+              <button type="button" class="filter-btn filter-d2-btn px-3 py-1.5 rounded-lg  transition text-slate-700 dark:text-slate-200 font-medium" data-filter="seco">🏜️ Suelo Seco</button>
+              <button type="button" class="filter-btn filter-d2-btn px-3 py-1.5 rounded-lg  transition text-slate-700 dark:text-slate-200 font-medium" data-filter="optimo">💧 Suelo Óptimo</button>
             </div>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-1">
             <div class="domain2-card p-5 rounded-xl bg-[#F4F6F9] dark:bg-[#012243] border border-slate-200 dark:border-[#154D80] hover:border-[#0080FB] transition-all duration-300 shadow-sm space-y-3.5" data-category="seco">
               <div class="flex items-center justify-between gap-2">
-                <span class="font-bold text-[#01305B] dark:text-white text-sm">🍇 Sector 1: Lote Norte</span>
-                <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold border bg-amber-500/10 text-amber-700 dark:text-amber-300 border-amber-500/30">
-                  🟠 Humedad: seco
+                <span class="font-bold text-[#01305B] dark:text-white text-sm">🌱 Lote 1: Lote Norte</span>
+                <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold border bg-rose-500/10 text-rose-700 dark:text-rose-300 border-rose-500/30">
+                  🏜️ Suelo: Seco
                 </span>
               </div>
               <div class="space-y-1.5">
                 <span class="text-[11px] text-slate-500 dark:text-slate-400 uppercase tracking-wider block font-bold">Datos Técnicos a Modelar en Prolog:</span>
                 <div class="flex flex-col gap-1.5">
-                  <span class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs text-[#01305B] dark:text-slate-100 flex items-center gap-1.5">
-                    <span aria-hidden="true">🆔</span> <span>Átomo del lote: lote_norte</span>
-                  </span>
                   <span class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs text-[#01305B] dark:text-slate-100 flex items-center gap-1.5">
                     <span aria-hidden="true">🍇</span> <span>Especie cultivada: vid</span>
                   </span>
@@ -1117,22 +1040,19 @@
             </div>
             <div class="domain2-card p-5 rounded-xl bg-[#F4F6F9] dark:bg-[#012243] border border-slate-200 dark:border-[#154D80] hover:border-[#0080FB] transition-all duration-300 shadow-sm space-y-3.5" data-category="optimo">
               <div class="flex items-center justify-between gap-2">
-                <span class="font-bold text-[#01305B] dark:text-white text-sm">🫒 Sector 2: Lote Central</span>
+                <span class="font-bold text-[#01305B] dark:text-white text-sm">🌱 Lote 2: Lote Central</span>
                 <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold border bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border-emerald-500/30">
-                  🟢 Humedad: optimo
+                  💧 Suelo: Óptimo
                 </span>
               </div>
               <div class="space-y-1.5">
                 <span class="text-[11px] text-slate-500 dark:text-slate-400 uppercase tracking-wider block font-bold">Datos Técnicos a Modelar en Prolog:</span>
                 <div class="flex flex-col gap-1.5">
                   <span class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs text-[#01305B] dark:text-slate-100 flex items-center gap-1.5">
-                    <span aria-hidden="true">🆔</span> <span>Átomo del lote: lote_central</span>
-                  </span>
-                  <span class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs text-[#01305B] dark:text-slate-100 flex items-center gap-1.5">
                     <span aria-hidden="true">🫒</span> <span>Especie cultivada: olivo</span>
                   </span>
                   <span class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs text-[#01305B] dark:text-slate-100 flex items-center gap-1.5">
-                    <span aria-hidden="true">✅</span> <span>Estado de humedad: optimo</span>
+                    <span aria-hidden="true">💧</span> <span>Estado de humedad: optimo</span>
                   </span>
                   <span class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs text-[#01305B] dark:text-slate-100 flex items-center gap-1.5">
                     <span aria-hidden="true">💧</span> <span>Tecnología de riego: goteo</span>
@@ -1146,19 +1066,16 @@
             </div>
             <div class="domain2-card p-5 rounded-xl bg-[#F4F6F9] dark:bg-[#012243] border border-slate-200 dark:border-[#154D80] hover:border-[#0080FB] transition-all duration-300 shadow-sm space-y-3.5" data-category="seco">
               <div class="flex items-center justify-between gap-2">
-                <span class="font-bold text-[#01305B] dark:text-white text-sm">🌿 Sector 3: Lote Sur</span>
-                <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold border bg-amber-500/10 text-amber-700 dark:text-amber-300 border-amber-500/30">
-                  🟠 Humedad: seco
+                <span class="font-bold text-[#01305B] dark:text-white text-sm">🌱 Lote 3: Lote Sur</span>
+                <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold border bg-rose-500/10 text-rose-700 dark:text-rose-300 border-rose-500/30">
+                  🏜️ Suelo: Seco
                 </span>
               </div>
               <div class="space-y-1.5">
                 <span class="text-[11px] text-slate-500 dark:text-slate-400 uppercase tracking-wider block font-bold">Datos Técnicos a Modelar en Prolog:</span>
                 <div class="flex flex-col gap-1.5">
                   <span class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs text-[#01305B] dark:text-slate-100 flex items-center gap-1.5">
-                    <span aria-hidden="true">🆔</span> <span>Átomo del lote: lote_sur</span>
-                  </span>
-                  <span class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs text-[#01305B] dark:text-slate-100 flex items-center gap-1.5">
-                    <span aria-hidden="true">🌿</span> <span>Especie cultivada: tabaco</span>
+                    <span aria-hidden="true">🍂</span> <span>Especie cultivada: tabaco</span>
                   </span>
                   <span class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs text-[#01305B] dark:text-slate-100 flex items-center gap-1.5">
                     <span aria-hidden="true">🏜️</span> <span>Estado de humedad: seco</span>
@@ -1186,35 +1103,35 @@
                   <span class="px-2 py-0.5 rounded text-[10px] font-extrabold bg-[#1569AE]/15 text-[#01305B] dark:text-[#6EC1E4] shrink-0">Hechos (3 × 1 pt)</span>
                   <code class="text-xs font-bold prolog-code text-[#01305B] dark:text-[#FFED00]">cultivo(Lote, Especie)</code>
                 </div>
-                <span class="text-xs text-slate-600 dark:text-slate-300">Hecho binario (/2): asocia cada lote ('lote_norte', 'lote_central', 'lote_sur') con su especie ('vid', 'olivo', 'tabaco').</span>
+                <span class="text-xs text-slate-600 dark:text-slate-300">Hecho binario (/2): asocia cada Lote ('lote_norte', 'lote_central', 'lote_sur') con su cultivo ('vid', 'olivo', 'tabaco').</span>
               </div>
               <div class="flex flex-col sm:flex-row sm:items-center justify-between p-2.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] gap-2">
                 <div class="flex items-center gap-2">
                   <span class="px-2 py-0.5 rounded text-[10px] font-extrabold bg-[#1569AE]/15 text-[#01305B] dark:text-[#6EC1E4] shrink-0">Hechos (3 × 1 pt)</span>
-                  <code class="text-xs font-bold prolog-code text-[#01305B] dark:text-[#FFED00]">humedad(Lote, EstadoHumedad)</code>
+                  <code class="text-xs font-bold prolog-code text-[#01305B] dark:text-[#FFED00]">humedad(Lote, Estado)</code>
                 </div>
-                <span class="text-xs text-slate-600 dark:text-slate-300">Hecho binario (/2): registra el estado hídrico actual del lote ('seco' u 'optimo').</span>
+                <span class="text-xs text-slate-600 dark:text-slate-300">Hecho binario (/2): registra el nivel hídrico del suelo ('seco' u 'optimo').</span>
               </div>
               <div class="flex flex-col sm:flex-row sm:items-center justify-between p-2.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] gap-2">
                 <div class="flex items-center gap-2">
                   <span class="px-2 py-0.5 rounded text-[10px] font-extrabold bg-[#1569AE]/15 text-[#01305B] dark:text-[#6EC1E4] shrink-0">Hechos (3 × 1 pt)</span>
-                  <code class="text-xs font-bold prolog-code text-[#01305B] dark:text-[#FFED00]">sistema_riego(Lote, TipoRiego)</code>
+                  <code class="text-xs font-bold prolog-code text-[#01305B] dark:text-[#FFED00]">sistema_riego(Lote, Tipo)</code>
                 </div>
-                <span class="text-xs text-slate-600 dark:text-slate-300">Hecho binario (/2): indica la tecnología instalada en el lote ('goteo' o 'aspersion').</span>
+                <span class="text-xs text-slate-600 dark:text-slate-300">Hecho binario (/2): especifica la tecnología de irrigación instalada ('goteo' o 'aspersion').</span>
               </div>
               <div class="flex flex-col sm:flex-row sm:items-center justify-between p-2.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] gap-2">
                 <div class="flex items-center gap-2">
                   <span class="px-2 py-0.5 rounded text-[10px] font-extrabold bg-[#FFED00] text-[#01305B] shrink-0">Regla (2 pts)</span>
                   <code class="text-xs font-bold prolog-code text-[#01305B] dark:text-[#FFED00]">requiere_riego_urgente(Lote)</code>
                 </div>
-                <span class="text-xs text-slate-600 dark:text-slate-300">Regla deductiva (/1): verdadero si el estado de humedad del Lote es 'seco'.</span>
+                <span class="text-xs text-slate-600 dark:text-slate-300">Regla deductiva (/1): verdadero si el Lote presenta humedad 'seco'.</span>
               </div>
               <div class="flex flex-col sm:flex-row sm:items-center justify-between p-2.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] gap-2">
                 <div class="flex items-center gap-2">
                   <span class="px-2 py-0.5 rounded text-[10px] font-extrabold bg-[#FFED00] text-[#01305B] shrink-0">Regla (2 pts)</span>
                   <code class="text-xs font-bold prolog-code text-[#01305B] dark:text-[#FFED00]">lote_goteo_seco(Lote, Especie)</code>
                 </div>
-                <span class="text-xs text-slate-600 dark:text-slate-300">Regla deductiva (/2): verdadero si el Lote tiene humedad 'seco' (o requiere riego urgente), utiliza sistema de riego por 'goteo' y cultiva la Especie.</span>
+                <span class="text-xs text-slate-600 dark:text-slate-300">Regla deductiva (/2): verdadero si el Lote tiene cultivo(Lote, Especie), humedad(Lote, seco) y sistema_riego(Lote, goteo).</span>
               </div>
             </div>
           </div>
@@ -1256,11 +1173,11 @@
 % 2. Escribe aquí las 2 reglas (requiere_riego_urgente/1 y lote_goteo_seco/2):
 </textarea>
 
-          <!-- Panel de Validador Sintáctico en Tiempo Real (Linter Prolog) -->
+          <!-- Panel de Verificador preliminar de estructura y sintaxis básica de Prolog -->
           <div id="linter-panel-2" class="p-3.5 rounded-xl bg-[#01305B]/90 border border-[#6EC1E4]/40 space-y-2 text-xs">
             <div class="flex flex-wrap items-center justify-between gap-2">
               <span class="font-extrabold text-[#6EC1E4] flex items-center gap-1.5">
-                <span>🔍</span> Validador Sintáctico de Edimburgo en Tiempo Real:
+                <span>🔍</span> Verificador preliminar de estructura y sintaxis básica de Prolog:
               </span>
               <div class="flex flex-wrap items-center gap-2">
                 <span id="linter-facts-2" class="px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-200 font-bold border border-slate-600">
@@ -1269,11 +1186,14 @@
                 <span id="linter-rules-2" class="px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-200 font-bold border border-slate-600">
                   Reglas deductivas: 0 / 2
                 </span>
-                <span id="linter-status-2" class="px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 font-bold border border-amber-400/40">
+                <span id="linter-status-2" class="px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 font-bold border border-slate-600">
                   ⏳ Pendiente de codificar
                 </span>
               </div>
             </div>
+            <p class="text-[11px] text-amber-200/90 italic">
+              ⚠️ Este verificador brinda orientación y no reemplaza la ejecución en SWI-Prolog.
+            </p>
             <div id="linter-preds-2" class="text-[11px] text-slate-300 prolog-code"></div>
             <ul id="linter-warnings-2" class="space-y-1 text-amber-300 text-[11px] list-disc list-inside"></ul>
           </div>
@@ -1308,10 +1228,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej7_practica_caso2" data-key="item_convencion_edimburgo_atomos" aria-label="1. Convención sintáctica de Edimburgo para constantes vs. variables:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la opción en Prolog --</option>
-                <option value="es_identico_case_insensitive">Es exactamente igual porque Prolog no distingue mayúsculas de minúsculas</option>
-                <option value="lo_interpreta_como_variable_libre_universal">Prolog lo interpreta como una Variable lógica libre (cuantificada universalmente), alterando por completo la semántica de la base de hechos</option>
-                <option value="lo_convierte_en_numero_entero">El compilador convierte el identificador en una constante numérica igual a cero</option>
-                <option value="genera_comentario_bloque">Ignora toda la línea tratándola como un comentario</option>
+                <option value="es_identico_case_insensitive">Es indiferente, pues Prolog normaliza automáticamente a minúsculas.</option>
+                <option value="lo_convierte_en_numero_entero">El compilador emite un error de sintaxis que impide cargar el archivo.</option>
+                <option value="lo_interpreta_como_variable_libre_universal">Prolog lo interpreta como una variable lógica libre en vez de un átomo.</option>
+                <option value="genera_comentario_bloque">Prolog descarta la cláusula tratándola como un comentario de una sola línea.</option>
               </select>
             </div>
           </div>
@@ -1325,9 +1245,9 @@
               <select data-ex="ej7_practica_caso2" data-key="item_consulta_lotes_goteo" aria-label="2. Formulación de consulta existencial: &quot;¿Qué lotes cuentan con sistema de riego por goteo?&quot;:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la opción en Prolog --</option>
                 <option value="sistema_riego(lote, goteo).">sistema_riego(lote, goteo).</option>
-                <option value="sistema_riego(Lote, goteo).">sistema_riego(Lote, goteo).</option>
                 <option value="sistema_riego(Goteo, Lote).">sistema_riego(Goteo, Lote).</option>
                 <option value="riego_goteo(Lote).">riego_goteo(Lote).</option>
+                <option value="sistema_riego(Lote, goteo).">sistema_riego(Lote, goteo).</option>
               </select>
             </div>
           </div>
@@ -1340,10 +1260,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej7_practica_caso2" data-key="item_backtracking_riego_urgente" aria-label="3. Soluciones por Backtracking de la consulta requiere_riego_urgente(Lote).:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la opción en Prolog --</option>
-                <option value="solo_lote_central">Únicamente Lote = lote_central</option>
-                <option value="lote_norte_y_lote_sur">Lote = lote_norte y luego Lote = lote_sur (los dos lotes cuyo estado de humedad es seco)</option>
-                <option value="los_tres_lotes_por_igual">Los tres lotes (lote_norte, lote_central y lote_sur)</option>
-                <option value="ningun_lote_false">false en el primer intento</option>
+                <option value="lote_norte_y_lote_sur">Lote = lote_norte y luego Lote = lote_sur.</option>
+                <option value="solo_lote_central">Únicamente Lote = lote_central.</option>
+                <option value="los_tres_lotes_por_igual">Los tres lotes (lote_norte, lote_central y lote_sur).</option>
+                <option value="ningun_lote_false">false inmediatamente sin ligar variables.</option>
               </select>
             </div>
           </div>
@@ -1356,10 +1276,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej7_practica_caso2" data-key="item_resultado_lote_goteo_seco" aria-label="4. Resultado de la consulta existencial lote_goteo_seco(Lote, Especie).:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la opción en Prolog --</option>
-                <option value="lote_central_y_olivo">Lote = lote_central, Especie = olivo</option>
-                <option value="lote_norte_y_vid">Lote = lote_norte, Especie = vid (único lote que cumple simultáneamente humedad seco y riego por goteo)</option>
-                <option value="lote_sur_y_tabaco">Lote = lote_sur, Especie = tabaco</option>
-                <option value="false_ningun_lote_cumple">false, ningún lote satisface las tres metas</option>
+                <option value="lote_central_y_olivo">Lote = lote_central, Especie = olivo.</option>
+                <option value="lote_norte_y_vid">Lote = lote_norte, Especie = vid.</option>
+                <option value="lote_sur_y_tabaco">Lote = lote_sur, Especie = tabaco.</option>
+                <option value="false_ningun_lote_cumple">false, ningún lote satisface la regla.</option>
               </select>
             </div>
           </div>
@@ -1373,8 +1293,8 @@
               <select data-ex="ej7_practica_caso2" data-key="item_variable_anonima_agro" aria-label="5. Uso de la Variable Anónima (_) en consultas de existencia:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la opción en Prolog --</option>
                 <option value="humedad(Anonimo, seco).">humedad(Anonimo, seco).</option>
-                <option value="humedad(_, seco).">humedad(_, seco).</option>
                 <option value="humedad(?, seco).">humedad(?, seco).</option>
+                <option value="humedad(_, seco).">humedad(_, seco).</option>
                 <option value="humedad(null, seco).">humedad(null, seco).</option>
               </select>
             </div>
@@ -1388,25 +1308,14 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej7_practica_caso2" data-key="item_evaluacion_central_urgente_cwa" aria-label="6. Evaluación booleana bajo CWA de requiere_riego_urgente(lote_central).:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la opción en Prolog --</option>
-                <option value="true_porque_tiene_goteo">true, porque el lote central posee riego por goteo instalado</option>
-                <option value="false_humedad_optima_no_unifica_seco">false, porque humedad(lote_central, optimo) no unifica con el átomo seco exigido por la regla bajo el Supuesto de Mundo Cerrado</option>
-                <option value="true_por_backtracking_lote_sur">true, porque hace backtracking automático hacia el lote sur</option>
-                <option value="optimo_como_atomo">Imprime la palabra optimo en lugar de un valor booleano</option>
+                <option value="true_porque_tiene_goteo">true, pues el lote central posee sistema de riego por goteo instalado.</option>
+                <option value="true_por_backtracking_lote_sur">true, pues el motor infiere automáticamente riego preventivo por CWA.</option>
+                <option value="optimo_como_atomo">false, pues el predicado de humedad no fue declarado en la directiva.</option>
+                <option value="false_humedad_optima_no_unifica_seco">false, pues su humedad es optimo y no unifica con seco bajo CWA.</option>
               </select>
             </div>
           </div>
         </div>
-
-        <!-- Orientación Bibliográfica Oficial -->
-        <details class="group mt-4 rounded-xl border border-[#1569AE]/30 bg-[#F4F6F9] dark:bg-[#01182E]/80 p-3.5 text-xs text-slate-700 dark:text-slate-200 transition-all">
-          <summary class="flex cursor-pointer items-center justify-between font-bold text-[#01305B] dark:text-[#FFED00] select-none">
-            <span>📖 Dónde estudiar este tema en la bibliografía oficial de cátedra</span>
-            <span class="transition group-open:rotate-180">▾</span>
-          </summary>
-          <div class="mt-2.5 pt-2.5 border-t border-slate-300 dark:border-[#154D80] space-y-1">
-            <p><strong>Referencia Bibliográfica:</strong> <a href="http://jdelagarza.fime.uanl.mx/IA/Libros/inteligencia-artificial-un-enfoque-moderno-stuart-j-russell.pdf" target="_blank" rel="noopener noreferrer" class="underline text-[#1569AE] dark:text-[#6EC1E4] hover:text-[#01305B] font-semibold">Russell &amp; Norvig — Inteligencia Artificial: Un Enfoque Moderno</a> &bull; Russell & Norvig Cap. 9.4–9.5 (pp. 302–308) • Diapositivas Clase 7 (`7 - Lógica aplicada en PROLOG.pptx`, Slides 11–20).</p>
-          </div>
-        </details>
       </article>
     </section>
 
@@ -1421,7 +1330,7 @@
         Generar y Exportar Archivo de Respuestas + Bases de Conocimiento (<code>respuestas_simulacro.json</code>)
       </h3>
       <p class="text-slate-600 dark:text-slate-200 text-sm max-w-2xl mx-auto">
-        Verifica que el indicador superior marque <strong>34 de 34 completados (100%)</strong> (20 preguntas teóricas, las 2 Bases de Conocimiento Prolog con sus 9 hechos y 2 reglas cada una, y las 12 preguntas de consultas). Descarga el JSON y ejecuta <code>python autograder_simulacro.py respuestas_simulacro.json</code>.
+        Verifica que el indicador superior marque <strong>34 de 34 completados (100%)</strong> (20 preguntas teóricas, las 2 Bases de Conocimiento Prolog con sus 9 hechos y 2 reglas cada una, y las 12 preguntas de consultas).
       </p>
 
       <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
@@ -1480,58 +1389,20 @@
   </div>
 
   <!-- =========================================================================
-       MODAL 2: MAPA BIBLIOGRÁFICO COMPLETO (TP1 A TP7)
-  ========================================================================== -->
-  <div id="modal-biblio" class="fixed inset-0 z-50 hidden bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-white dark:bg-[#023967] border-2 border-[#1569AE] rounded-2xl max-w-4xl w-full max-h-[85vh] flex flex-col shadow-2xl overflow-hidden">
-      <div class="px-5 py-4 bg-[#01305B] text-white flex items-center justify-between">
-        <h3 class="font-extrabold text-sm text-[#FFED00] ucse-heading">📖 Mapa Bibliográfico Oficial de Cátedra — Laboratorio I (UCSE DASS)</h3>
-        <button type="button" id="btn-close-biblio" class="px-2.5 py-1 rounded bg-rose-600 text-white text-xs font-bold hover:bg-rose-500 transition">
-          ✕ Cerrar
-        </button>
-      </div>
-      <div class="p-6 overflow-y-auto space-y-4 text-xs text-slate-700 dark:text-slate-200">
-        <p>Toda la evaluación se fundamenta en el libro de cátedra <a href="http://jdelagarza.fime.uanl.mx/IA/Libros/inteligencia-artificial-un-enfoque-moderno-stuart-j-russell.pdf" target="_blank" rel="noopener noreferrer" class="underline font-bold text-[#1569AE] dark:text-[#FFED00]">Russell, S. &amp; Norvig, P. — Inteligencia Artificial: Un Enfoque Moderno</a> y en las presentaciones oficiales:</p>
-        <div class="overflow-x-auto rounded-xl border border-slate-200 dark:border-[#154D80]">
-          <table class="w-full text-left border-collapse">
-            <thead class="bg-[#01305B] text-[#FFED00] uppercase text-[11px]">
-              <tr>
-                <th class="p-3">Sección / Unidad</th>
-                <th class="p-3">Capítulos en Russell &amp; Norvig</th>
-                <th class="p-3">Presentaciones de Cátedra (Ing. Fabio Argañaraz)</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-slate-200 dark:divide-[#154D80]">
-              <tr><td class="p-3 font-bold">Parte I • TP1 (Agentes y PEAS)</td><td class="p-3">Cap. 1 (pp. 1–30), Cap. 2 (pp. 34–58) y Cap. 26 (pp. 1020–1028)</td><td class="p-3">Clases 1, 2 y 3.1</td></tr>
-              <tr><td class="p-3 font-bold">Parte I • TP2 (Búsqueda a Ciegas)</td><td class="p-3">Cap. 3.1 a 3.5 (pp. 64–96, Tabla 3.17)</td><td class="p-3">Clase 3.2: Resolución mediante búsqueda</td></tr>
-              <tr><td class="p-3 font-bold">Parte I • TP3 (Búsqueda Informada)</td><td class="p-3">Cap. 4.1 a 4.3 (pp. 98–121)</td><td class="p-3">Clase 4: Búsqueda informada y exploración</td></tr>
-              <tr><td class="p-3 font-bold">Parte I • TP4 (Conocimiento y LP)</td><td class="p-3">Cap. 7.1 a 7.5 (pp. 194–224)</td><td class="p-3">Clase 5: Conocimiento y Razonamiento</td></tr>
-              <tr><td class="p-3 font-bold">Parte I • TP5 (Lógica Primer Orden)</td><td class="p-3">Cap. 8 (pp. 240–268) y Cap. 9.1–9.5 (pp. 272–308)</td><td class="p-3">Clase 6: Lógica de Primer Orden</td></tr>
-              <tr><td class="p-3 font-bold">Parte II • TP7 (Práctica en Prolog)</td><td class="p-3">Cap. 9.4–9.5 (Resolución SLD, Horn, CWA y NAF)</td><td class="p-3">Clase 7: Lógica aplicada en PROLOG</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- =========================================================================
-       MODAL 3: GUÍA DE AUTOEVALUACIÓN Y ENTREGA GIT / GITHUB
+       MODAL 2: GUÍA DE ENTREGA Y COMANDOS GIT
   ========================================================================== -->
   <div id="modal-git" class="fixed inset-0 z-50 hidden bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
     <div class="bg-white dark:bg-[#023967] border-2 border-[#1569AE] rounded-2xl max-w-3xl w-full max-h-[85vh] flex flex-col shadow-2xl overflow-hidden">
       <div class="px-5 py-4 bg-[#01305B] text-white flex items-center justify-between">
-        <h3 class="font-extrabold text-sm text-[#FFED00] ucse-heading">🐙 Instructivo de Autoevaluación Híbrida (KB + Consultas) y Entrega Git</h3>
+        <h3 class="font-extrabold text-sm text-[#FFED00] ucse-heading">🐙 Instructivo de Entrega y Comandos Git</h3>
         <button type="button" id="btn-close-git" class="px-2.5 py-1 rounded bg-rose-600 text-white text-xs font-bold hover:bg-rose-500 transition">
           ✕ Cerrar
         </button>
       </div>
       <div class="p-6 overflow-y-auto space-y-4 text-xs text-slate-700 dark:text-slate-200 leading-relaxed">
-        <p><strong>1. Codificar las Bases de Conocimiento (26 pts) y responder el cuestionario (74 pts):</strong> En cada caso práctico de la Parte II, escribe tus 9 hechos y 2 reglas en el <strong>Editor de Entrega de Base de Conocimientos</strong> (puedes usar el botón <em>Descargar .pl</em> o <em>Cargar .pl</em>). El Linter en vivo verificará que no tengas errores de sintaxis.</p>
-        <p><strong>2. Exportar el archivo JSON unificado:</strong> Al llegar a 34/34 completados (100%), pulsa en <strong>Exportar (.json)</strong> para guardar <code>respuestas_simulacro.json</code> (incluye tanto tus selecciones como el código fuente de tus 2 Bases de Conocimientos).</p>
-        <p><strong>3. Ejecutar el Autoevaluador en Python 3:</strong></p>
-        <pre class="p-3 rounded-lg bg-[#01182E] text-[#FFED00] prolog-code overflow-x-auto">python autograder_simulacro.py respuestas_simulacro.json</pre>
-        <p><strong>4. Confirmar y subir tu entrega al repositorio GitHub:</strong></p>
+        <p><strong>1. Codificar las Bases de Conocimiento (26 pts) y responder el cuestionario (74 pts):</strong> En cada caso práctico de la Parte II, escribe tus 9 hechos y 2 reglas en el <strong>Editor de Entrega de Base de Conocimientos</strong> (puedes usar el botón <em>Descargar .pl</em> o <em>Cargar .pl</em>). El Verificador preliminar comprobará que la estructura sintáctica sea adecuada.</p>
+        <p><strong>2. Exportar el archivo JSON unificado:</strong> Al llegar a 34/34 completados (100%), pulsa en <strong>Exportar (.json)</strong> para guardar <code>respuestas_simulacro.json</code> (incluye tus respuestas seleccionadas, el código de ambas Bases de Conocimientos y marcas temporales de entrega).</p>
+        <p><strong>3. Confirmar y subir tu entrega al repositorio GitHub de la Cátedra:</strong></p>
         <pre class="p-3 rounded-lg bg-[#01182E] text-[#6EC1E4] prolog-code overflow-x-auto">git add respuestas_simulacro.json *.pl
 git commit -m "Entrega Simulacro de Examen Integrador - [Tu Nombre y Apellido]"
 git push origin main</pre>
