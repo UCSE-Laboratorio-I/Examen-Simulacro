@@ -5,7 +5,7 @@
     "catedra": "Laboratorio I - Tecnicatura Universitaria en Automatización y Robótica / Informática - UCSE DASS",
     "ciclo": 2026,
     "docente": "Ing. Fabio D. Argañaraz",
-    "version": "2.1.0"
+    "version": "2.2.0"
   },
   "security": {
     "algorithm": "SHA-256 + Salted HMAC + Canonical Prolog AST Alpha-Hash",
@@ -75,9 +75,9 @@
     },
     "ej6_practica_caso1": {
       "part": "practica",
-      "weight": 25,
-      "kb_weight": 13,
-      "questions_weight": 12,
+      "weight": 50,
+      "kb_weight": 26,
+      "questions_weight": 24,
       "pl_file": "caso1_hospital.pl",
       "expected_pred_sigs": [
         "atiende/2",
@@ -87,7 +87,7 @@
         "especialista_manana/2"
       ],
       "biblio": "Russell & Norvig Cap. 9.4–9.5 (pp. 302–308) • Diapositivas Clase 7 (`7 - Lógica aplicada en PROLOG.pptx`, Slides 6–17).",
-      "feedback": "En el dominio hospitalario, debes declarar los 9 hechos (3 de atiende/2, 3 de turno/2 y 3 de complejidad/2) con átomos en minúscula y punto final, además de las reglas guardia_critica/1 y especialista_manana/2. Las consultas con variables libres instancian soluciones por backtracking y las consultas no derivables retornan false bajo el Supuesto de Mundo Cerrado (CWA).",
+      "feedback": "En el dominio hospitalario, debes declarar los 9 hechos (3 de atiende/2, 3 de turno/2 y 3 de complejidad/2) con átomos en minúscula y punto final, además de las reglas guardia_critica/1 y especialista_manana/2 (26 pts). Las 6 consultas evalúan unificación, backtracking y CWA (24 pts).",
       "kb_facts_hashes": [
         "4991644a99017d945df9b91e25bbf236cfc8d5fec1ced0b9d19f3efc42ca7bc4",
         "1a8a949810ddb3194e3410604d4d049c9442a58bdbd6df4c9e4221da179b5571",
@@ -115,50 +115,6 @@
         "item_evaluacion_paz_critica": "b588388f2eac110a9ea729e14a78cbc09e73c135d016b3efcfa1177e38d2d449",
         "item_consulta_especialista_manana_conjuncion": "4d62e87e78085410aef1258a959b53f4e2e2cb424e53fa846d05e18553b2ab41",
         "item_evaluacion_luna_critica_cwa": "f5f7c37debca68184ae04d97f207117a295fc49f3922671ec8c7958f2b47d88c"
-      }
-    },
-    "ej7_practica_caso2": {
-      "part": "practica",
-      "weight": 25,
-      "kb_weight": 13,
-      "questions_weight": 12,
-      "pl_file": "caso2_agro_iot.pl",
-      "expected_pred_sigs": [
-        "cultivo/2",
-        "humedad/2",
-        "sistema_riego/2",
-        "requiere_riego_urgente/1",
-        "lote_goteo_seco/2"
-      ],
-      "biblio": "Russell & Norvig Cap. 9.4–9.5 (pp. 302–308) • Diapositivas Clase 7 (`7 - Lógica aplicada en PROLOG.pptx`, Slides 11–20).",
-      "feedback": "En el sistema Agro-IoT, debes declarar los 9 hechos (3 de cultivo/2, 3 de humedad/2 y 3 de sistema_riego/2) y las reglas requiere_riego_urgente/1 y lote_goteo_seco/2. Solo lote_norte satisface simultáneamente suelo seco y riego por goteo.",
-      "kb_facts_hashes": [
-        "eebbe174cfb6bf786f4aea3d42726a2caeb0c24c41e2f8c107f1dd765a50c34b",
-        "1cea86a6bff3f25efa6432da52af26dfe4aeb3107aa5bd3734d35d1dd5cd1c5f",
-        "76dfaab35b18cab9d5e02f484d74e3b415494ec7919de8aed65cc60ea8f260ad",
-        "d0371bf0ea5fcc86b20160bc3ae4e09f72b6130d028713483341504bbc3c905e",
-        "bca18fb5a05e642f47e7d69caa26d07634d7a4b3a1ae4824ae81ce0eecc50343",
-        "3e6535eec8772e68d4a635927e72724cc0e70c3a257531786fdc34fbf3f6873a",
-        "50de451ba3e8c6f30b59b0d195494d2db8d7608e56915bc71eca5f0e409a62ef",
-        "1968e02430d3323ae7271c69ac817fa8556472ba20b6eced5d99e9030c050959",
-        "1166aaba040e69ab161a4c059dd53956c3f6d8d28111bc243c89fec0df250459"
-      ],
-      "kb_rules_hashes": {
-        "requiere_riego_urgente/1": [
-          "56d967e5255f03fb9f883a4b962dcae7d2d9611a96a58cf6a55ab9194325ca8e"
-        ],
-        "lote_goteo_seco/2": [
-          "81a49d309567f0a07cbac68b2680230ca50439dedbb9c061bed239bbdfe7113f",
-          "81a49d309567f0a07cbac68b2680230ca50439dedbb9c061bed239bbdfe7113f"
-        ]
-      },
-      "hashes": {
-        "item_convencion_edimburgo_atomos": "53588a58de03dabaa48585eb0e92f55cdc77e41cdab69430d61de8472700b34c",
-        "item_consulta_lotes_goteo": "809391f5576eccdbcee358e0681cd4765e86f2764d0fc4a5f253de7067e58fab",
-        "item_backtracking_riego_urgente": "397eaaa3339ea3ba5c06f1bd7d4ddfdc1f0d1d46e213e3b68d8b386390c40ab8",
-        "item_resultado_lote_goteo_seco": "448e75c9ce8522a2136b0eb75a2a0aa6aba8ef57333e5f94a9791b1ba26a2b84",
-        "item_variable_anonima_agro": "4fe777e1cd4bd030157076f2e6458b1fc51e19b6c38287d1a3a37e861e56f9ad",
-        "item_evaluacion_central_urgente_cwa": "e5b5d04fcf182524c1e90c153b8c515b19bf2c7e40b50d61cb68e435a9d911ec"
       }
     }
   }
